@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="jquery.min.js"></script>
+    <script src="jquery.cookie.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#create_cookie").click(function() {
+                $.cookie('jqcookie', 'Cookie Value');
+                alert("Cookie created");
+            });
+
+            $("#read_cookie").click(function() {
+                $(".cookiediv").append($.cookie('jqcookie'));
+            });
+
+        });
+    </script>
+
+    <style>
+        .cookiediv {
+            width: 250px;
+            height: auto;
+            padding: 20px;
+            background-color: #009700;
+            color: #fff;
+            font-size: 16px;
+        }
+        
+        .btncls {
+            background-color: #2D3942;
+            border: #2e6da4;
+            font-family: Arial, Geneva, Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            color: #fff;
+            letter-spacing: 1px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: normal;
+            border-radius: 4px;
+            line-height: 1.5;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="create_cookie" class="btncls">Create a Cookie: jqcookie</button>
+    <button id="read_cookie" class="btncls">Read Cookie value</button>
+    <p>
+        <div class="cookiediv">The cookie value is: </div>
+    </p>
+</body>
+
+</html>
