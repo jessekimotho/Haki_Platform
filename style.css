@@ -1,34 +1,34 @@
 @font-face {
     font-family: 'PBS KIDS Headline';
-    src: url('PBSKIDSHeadline-Regular.woff2') format('woff2'), url('PBSKIDSHeadline-Regular.woff') format('woff');
+    src: url('fonts/PBSKIDSHeadline-Regular.woff2') format('woff2'), url('fonts/PBSKIDSHeadline-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Colfax';
-    src: url('Colfax-Black.woff2') format('woff2'), url('Colfax-Black.woff') format('woff');
+    src: url('fonts/Colfax-Black.woff2') format('woff2'), url('fonts/Colfax-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Colfax';
-    src: url('Colfax-BlackItalic.woff2') format('woff2'), url('Colfax-BlackItalic.woff') format('woff');
+    src: url('fonts/Colfax-BlackItalic.woff2') format('woff2'), url('fonts/Colfax-BlackItalic.woff') format('woff');
     font-weight: 900;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Colfax';
-    src: url('Colfax-MediumItalic.woff2') format('woff2'), url('Colfax-MediumItalic.woff') format('woff');
+    src: url('fonts/Colfax-MediumItalic.woff2') format('woff2'), url('fonts/Colfax-MediumItalic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Colfax';
-    src: url('Colfax-BoldItalic.woff2') format('woff2'), url('Colfax-BoldItalic.woff') format('woff');
+    src: url('fonts/Colfax-BoldItalic.woff2') format('woff2'), url('fonts/Colfax-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -36,7 +36,7 @@
 
 @font-face {
     font-family: 'Colfax';
-    src: url('Colfax-LightItalic.woff2') format('woff2'), url('Colfax-LightItalic.woff') format('woff');
+    src: url('fonts/Colfax-LightItalic.woff2') format('woff2'), url('fonts/Colfax-LightItalic.woff') format('woff');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
@@ -44,7 +44,7 @@
 
 @font-face {
     font-family: 'Colfax';
-    src: url('Colfax-Bold.woff2') format('woff2'), url('Colfax-Bold.woff') format('woff');
+    src: url('fonts/Colfax-Bold.woff2') format('woff2'), url('fonts/Colfax-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -52,7 +52,7 @@
 
 @font-face {
     font-family: 'Colfax';
-    src: url('Colfax-ThinItalic.woff2') format('woff2'), url('Colfax-ThinItalic.woff') format('woff');
+    src: url('fonts/Colfax-ThinItalic.woff2') format('woff2'), url('fonts/Colfax-ThinItalic.woff') format('woff');
     font-weight: 100;
     font-style: italic;
     font-display: swap;
@@ -60,7 +60,7 @@
 
 @font-face {
     font-family: 'Colfax';
-    src: url('Colfax-Regular.woff2') format('woff2'), url('Colfax-Regular.woff') format('woff');
+    src: url('fonts/Colfax-Regular.woff2') format('woff2'), url('fonts/Colfax-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -68,7 +68,7 @@
 
 @font-face {
     font-family: 'Colfax';
-    src: url('Colfax-Medium.woff2') format('woff2'), url('Colfax-Medium.woff') format('woff');
+    src: url('fonts/Colfax-Medium.woff2') format('woff2'), url('fonts/Colfax-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -76,7 +76,7 @@
 
 @font-face {
     font-family: 'Colfax';
-    src: url('Colfax-RegularItalic.woff2') format('woff2'), url('Colfax-RegularItalic.woff') format('woff');
+    src: url('fonts/Colfax-RegularItalic.woff2') format('woff2'), url('fonts/Colfax-RegularItalic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -84,7 +84,7 @@
 
 @font-face {
     font-family: 'Colfax';
-    src: url('Colfax-Light.woff2') format('woff2'), url('Colfax-Light.woff') format('woff');
+    src: url('fonts/Colfax-Light.woff2') format('woff2'), url('fonts/Colfax-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -92,7 +92,7 @@
 
 @font-face {
     font-family: 'Colfax';
-    src: url('Colfax-Thin.woff2') format('woff2'), url('Colfax-Thin.woff') format('woff');
+    src: url('fonts/Colfax-Thin.woff2') format('woff2'), url('fonts/Colfax-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -233,7 +233,7 @@
 * {
     box-sizing: border-box;
     touch-action:none;
-    cursor: url(poind.png) 36 36, auto;
+    cursor: url(/images/poind.png) 36 36, auto;
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
@@ -249,7 +249,7 @@
 * {
     box-sizing: border-box;
     touch-action:none;
-    cursor: url(poind.png) 36 36, auto;
+    cursor: url(/images/poind.png) 36 36, auto;
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;

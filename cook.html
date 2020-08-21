@@ -2,17 +2,17 @@
 <html>
 
 <head>
-    <script src="jquery.min.js"></script>
-    <script src="jquery.cookie.js"></script>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/jquery.cookie.js"></script>
 
     <script>
-        $(document).ready(function() {
-            $("#create_cookie").click(function() {
+        $(document).ready(function () {
+            $("#create_cookie").click(function () {
                 $.cookie('jqcookie', 'Cookie Value');
                 alert("Cookie created");
             });
 
-            $("#read_cookie").click(function() {
+            $("#read_cookie").click(function () {
                 $(".cookiediv").append($.cookie('jqcookie'));
             });
 
@@ -28,7 +28,7 @@
             color: #fff;
             font-size: 16px;
         }
-        
+
         .btncls {
             background-color: #2D3942;
             border: #2e6da4;
@@ -51,7 +51,7 @@
     <button id="create_cookie" class="btncls">Create a Cookie: jqcookie</button>
     <button id="read_cookie" class="btncls">Read Cookie value</button>
     <p>
-        <div class="cookiediv">The cookie value is: </div>
+    <div class="cookiediv">The cookie value is: </div>
     </p>
 </body>
 
