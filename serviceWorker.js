@@ -1,7 +1,7 @@
 var CACHE_NAME = 'static-cache';
 var urlsToCache = [
     ".",
-    "/index.html",
+    "index.html",
     "style.css",
     "app.js",
 ];
