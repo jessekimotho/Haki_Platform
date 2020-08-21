@@ -502,7 +502,7 @@
 
         </div>
 
-        <div class="fourthe-triv hidenow nor-cont">
+        <!-- <div class="fourthe-triv hidenow nor-cont">
 
             <div class="incorrect fourthe-wrong hidenow">
                 <span class="Incorrected">Incorrect</span>
@@ -535,14 +535,14 @@
                 <div class="go2firstq buttoner animate__animated animate__jello wrong-fourthe">False</div>
             </div>
 
-        </div>
+        </div> -->
 
         <div class="finalis hidenow nor-cont">
 
             <div class="trivo-cont">
                 <div class="but-howl">
-                    <a class="go2firstq buttoner animate__animated  playagain animate__jello" href="./index.html">Go
-                        Home</a>
+                    <!-- <a class="go2firstq buttoner animate__animated  playagain animate__jello" href="./index.html">Go
+                        Home</a> -->
                     <!-- <a class="go2firstq buttoner animate__animated animate__jello" href="./index.html">Go Home </a> -->
                 </div>
                 <div class="iyoau nu-iyotu">
@@ -553,7 +553,7 @@
                 </div>
                 <div class="but-howl">
                     <!-- <a class="go2firstq buttoner animate__animated  playagain animate__jello" href="./Rights.html">Play Again</a> -->
-                    <a class="go2firstq buttoner animate__animated animate__jello" href="./index.html">Next Lesson</a>
+                    <div class=" gobackhome-1 go2firstq buttoner animate__animated animate__jello">Next Lesson</div>
                 </div>
             </div>
         </div>
@@ -700,7 +700,8 @@
                 </div>
                 <div class="but-howl">
                     <!-- <a class="go2firstq buttoner animate__animated  playagain animate__jello" href="./Rights.html">Play Again</a> -->
-                    <a class="go2firstq buttoner animate__animated animate__jello" href="./index.html">Go Home </a>
+                    <!-- <a class="go2firstq buttoner animate__animated animate__jello" href="./index.html">Go Home </a> -->
+                    <div class=" gobackhome-2 go2firstq buttoner animate__animated animate__jello">Next Lesson</div>
                 </div>
             </div>
 
@@ -843,7 +844,7 @@
                 </div>
                 <div class="but-howl">
                     <!-- <a class="go2firstq buttoner animate__animated  playagain animate__jello" href="./Rights.html">Play Again</a> -->
-                    <div class=" gobackhome-1 go2firstq buttoner animate__animated animate__jello">Go Back Home </div>
+                    <div class=" gobackhome-3 go2firstq buttoner animate__animated animate__jello">Next Lesson </div>
                 </div>
             </div>
 
@@ -1052,13 +1053,9 @@
         //DIRECTS USERS FROM QUIZ TO MAIN MENU
 
         $(".gobackhome-1").click(function () {
-
-
             //HIDE QUIZ
             $(".quiz-1").removeClass("animate__bounceIn visible").addClass("animate__bounceOut");
             twomenu.goTo(1);
-
-
             //HIDE CHARACTERS, RESET CHAT BUBBLE AND RESET INITIALIZERS
             $(".fortaji").removeClass("animate__bounceInLeft").addClass("animate__bounceOutLeft");
             $(".fortemi").addClass("hidaa").addClass("animate__bounceOutRight");
@@ -1070,11 +1067,92 @@
             $(".fortemi").attr('class', 'fortemi');
             $(".fortaji").attr('class', 'fortaji');
             $(".chathol").attr('class', 'chathol');
-
             setTimeout(
                 function () {
 
                     $(".onlytwo").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
+
+                    //SHOW "BACK" AND "NEXT" BUTTONS
+                    $(".preva, .nexa").removeClass("animate__bounceOut").addClass("animate__bounceIn");
+
+
+                }, 600);
+
+        });
+
+        $(".gobackhome-2").click(function () {
+            //HIDE QUIZ
+            $(".quiz-2").removeClass("animate__bounceIn visible").addClass("animate__bounceOut");
+            threemenu.goTo(2);
+            //HIDE CHARACTERS, RESET CHAT BUBBLE AND RESET INITIALIZERS
+            $(".fortaji").removeClass("animate__bounceInLeft").addClass("animate__bounceOutLeft");
+            $(".fortemi").addClass("hidaa").addClass("animate__bounceOutRight");
+            $(".optionimg").removeClass("invariable");
+            $(".next").removeClass("visibleko");
+            $(".disclaimer").addClass("kwerya").removeClass("gotopper");
+            $(".chathol").removeClass("switchleft").removeClass("animate__bounceIn").addClass("animate__bounceOut").removeClass("visible");
+            $(".mod-one-active").attr('class', 'next first-next');
+            $(".fortemi").attr('class', 'fortemi');
+            $(".fortaji").attr('class', 'fortaji');
+            $(".chathol").attr('class', 'chathol');
+            setTimeout(
+                function () {
+
+                    $(".onlythree").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
+
+                    //SHOW "BACK" AND "NEXT" BUTTONS
+                    $(".preva, .nexa").removeClass("animate__bounceOut").addClass("animate__bounceIn");
+
+
+                }, 600);
+
+        });
+        $(".gobackhome-3").click(function () {
+            //HIDE QUIZ
+            $(".quiz-3").removeClass("animate__bounceIn visible").addClass("animate__bounceOut");
+            fourmenu.goTo(3);
+            //HIDE CHARACTERS, RESET CHAT BUBBLE AND RESET INITIALIZERS
+            $(".fortaji").removeClass("animate__bounceInLeft").addClass("animate__bounceOutLeft");
+            $(".fortemi").addClass("hidaa").addClass("animate__bounceOutRight");
+            $(".optionimg").removeClass("invariable");
+            $(".next").removeClass("visibleko");
+            $(".disclaimer").addClass("kwerya").removeClass("gotopper");
+            $(".chathol").removeClass("switchleft").removeClass("animate__bounceIn").addClass("animate__bounceOut").removeClass("visible");
+            $(".mod-one-active").attr('class', 'next first-next');
+            $(".fortemi").attr('class', 'fortemi');
+            $(".fortaji").attr('class', 'fortaji');
+            $(".chathol").attr('class', 'chathol');
+            setTimeout(
+                function () {
+
+                    $(".onlyfour").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
+
+                    //SHOW "BACK" AND "NEXT" BUTTONS
+                    $(".preva, .nexa").removeClass("animate__bounceOut").addClass("animate__bounceIn");
+
+
+                }, 600);
+
+        });
+        $(".gobackhome-4").click(function () {
+            //HIDE QUIZ
+            $(".quiz-4").removeClass("animate__bounceIn visible").addClass("animate__bounceOut");
+            fourmenu.goTo(4);
+            //HIDE CHARACTERS, RESET CHAT BUBBLE AND RESET INITIALIZERS
+            $(".fortaji").removeClass("animate__bounceInLeft").addClass("animate__bounceOutLeft");
+            $(".fortemi").addClass("hidaa").addClass("animate__bounceOutRight");
+            $(".optionimg").removeClass("invariable");
+            $(".next").removeClass("visibleko");
+            $(".disclaimer").addClass("kwerya").removeClass("gotopper");
+            $(".chathol").removeClass("switchleft").removeClass("animate__bounceIn").addClass("animate__bounceOut").removeClass("visible");
+            $(".mod-one-active").attr('class', 'next first-next');
+            $(".fortemi").attr('class', 'fortemi');
+            $(".fortaji").attr('class', 'fortaji');
+            $(".chathol").attr('class', 'chathol');
+            setTimeout(
+                function () {
+
+                    $(".onlyfour").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
 
                     //SHOW "BACK" AND "NEXT" BUTTONS
                     $(".preva, .nexa").removeClass("animate__bounceOut").addClass("animate__bounceIn");
@@ -1736,6 +1814,7 @@
 
 <script>
 
+    // Quiz One
     $(".start-triv").click(function () {
         $(".showbig").fadeOut(100);
         $(".instaro").removeClass("hidenow");
@@ -1760,7 +1839,7 @@
         $(".seconde-triv").removeClass("hidenow");
     });
 
-
+    // Question 2
     $(".wrong-seconde").click(function () {
         $(".trivo-seconde").fadeOut();
         $(".seconde-wrong").removeClass("hidenow");
@@ -1775,8 +1854,7 @@
         $(".thirde-triv").removeClass("hidenow");
     });
 
-    // Third Question
-
+    // Question 3
     $(".wrong-thirde").click(function () {
         $(".trivo-thirde").fadeOut();
         $(".thirde-wrong").removeClass("hidenow");
@@ -1788,52 +1866,18 @@
 
     $(".nextwrong-thirde, .nextright-thirde").click(function () {
         $(".thirde-triv").fadeOut();
-        //Check if there's a fourth Question
-        if ($(".thirde-triv").next().hasClass("fourthe-triv")) {
-            $(".fourthe-triv").removeClass("hidenow");
-        } else {
-            $(".finalis").removeClass("hidenow");
-            $.cookie('completedQ1Cookie', true, {
-                expires: 4000
-            });
-        }
-    });
-
-    // Fourth Question
-    $(".wrong-fourthe").click(function () {
-        $(".trivo-fourthe").fadeOut();
-        $(".fourthe-wrong").removeClass("hidenow");
-    });
-    $(".right-fourthe").click(function () {
-        $(".trivo-fourthe").fadeOut(300);
-        $(".fourthe-correct").removeClass("hidenow");
-    });
-    $(".nextwrong-fourthe, .nextright-fourthe").click(function () {
-        $(".fourthe-triv").fadeOut();
         $(".finalis").removeClass("hidenow");
-        //sets cookie that they have completed this quiz
         $.cookie('completedQ1Cookie', true, {
             expires: 4000
         });
     });
 
-    $(".playagain").click(function () {
-        //removes cookie set on completion — will be re-set after completion
-        $.removeCookie('completedQ1Cookie', { path: '/' });
-    });
-
     var numVal = parseInt($(".totalscore").text());
-
     $('.righte-button').click(function () {
         ++numVal;
         $(".totalscore").text(numVal);
-
-        //Check score and choose whether to persist
-        if (numVal < 2) {
-            console.log("Child Failed miserably!")
-        }
-
     });
+
 </script>
 
 <!-- SCRIPTS LOADED IN HTML TO INCREASE INITIAL LOAD SPEEDS -->
@@ -2237,7 +2281,7 @@
                     $(".homer").removeClass("animate__bounceOut").addClass("animate__bounceIn");
                     $(".homeimg").addClass("showup");
                     $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
-                    x
+
                     $(".closeback").addClass("onyeka");
                 }, 400);
 
@@ -2755,10 +2799,7 @@
                     }, 150);
                 $(".sixthe-p9-next").addClass("sixthe-p10-next").removeClass("sixthe-p9-next");
 
-
                 //SLIDE THAT PRECEDES TRANSITIONER
-
-
             } else if ($('.next').hasClass("sixthe-p10-next")) {
                 $.cookie('mod1cookie', 'complitedi', {
                     expires: 4000
@@ -2767,14 +2808,13 @@
                 $("#t1v6")[0].currentTime = 0;
                 $("#t1v7")[0].play();
                 $(".chathol").html("Yes, children have so many rights.You can learn  more about them on the African Children's Committee's website, on www.acewrc.africa. Or you ask your teachers at school.");
-                $(".sixthe-p10-next").addClass("transitioner-pre-1").removeClass("sixthe-p10-next");
+                $(".sixthe-p10-next").addClass("transitioner-trivia-1").removeClass("sixthe-p10-next");
 
-
-                //CONGRATULATIONS MESSAGE
-
-            } else if ($('.next').hasClass("transitioner-pre-1")) {
+                //CONGRATS MESSAGE
+            } else if ($('.next').hasClass("transitioner-trivia-1")) {
                 $("#t1v7")[0].pause();
                 $("#t1v7")[0].currentTime = 0;
+
                 $("#cong-sound")[0].play();
                 $('#cong-sound').prop("volume", 0.6);
                 $(".backimg").removeClass("animate__bounceIn").addClass("animate__bounceOut");
@@ -2790,18 +2830,17 @@
                 $(".fortaji").attr('class', 'fortaji');
                 $(".chathol").attr('class', 'chathol');
                 $(".congrat-1").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
-                $(".transitioner-pre-1").addClass("transitioner-pre-2").removeClass("transitioner-pre-1");
+                $(".transitioner-trivia-1").addClass("transitioner-start-trivia-1").removeClass("transitioner-trivia-1");
 
                 //SHOW RIGHTS TRIVIA 1
-            } else if ($('.next').hasClass("transitioner-pre-2")) {
-                console.log("actually hit this")
+            } else if ($('.next').hasClass("transitioner-start-trivia-1")) {
                 $(".congrat-1").removeClass("animate__bounceIn visible ").addClass("animate__bounceOut");
                 $(".next").removeClass("visibleko");
                 $(".mod-one-active").attr('class', 'next first-next');
                 setTimeout(
                     function () {
                         $(".quiz-1").removeClass("hidenow").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
-                    }, 150);
+                    }, 300);
             }
 
             ////   END OF MODULE 1   ////
@@ -3093,11 +3132,10 @@
                 $.cookie('mod2cookie', 'complitedi2', {
                     expires: 4000
                 });
-                $(".six-p18-next").addClass("transitioner-2").removeClass("six-p18-next");
+                $(".six-p18-next").addClass("transitioner-trivia-2").removeClass("six-p18-next");
 
                 // CONGRATS MESSAGE
-
-            } else if ($('.next').hasClass("transitioner-pre-2")) {
+            } else if ($('.next').hasClass("transitioner-trivia-2")) {
                 $("#a1c18")[0].pause();
                 $("#a1c18")[0].currentTime = 0;
 
@@ -3115,23 +3153,22 @@
                 $(".fortemi").attr('class', 'fortemi');
                 $(".fortaji").attr('class', 'fortaji');
                 $(".chathol").attr('class', 'chathol');
-                $(".congrat-1").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
-                $(".transitioner-pre-1").addClass("transitioner-pre-2").removeClass("transitioner-pre-1");
+                $(".congrat-2").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
+                $(".transitioner-trivia-2").addClass("transitioner-start-trivia-2").removeClass("transitioner-trivia-2");
 
                 //SHOW RIGHTS TRIVIA 2
-            } else if ($('.next').hasClass("transitioner-pre-2")) {
-                console.log("actually hit this")
-                $(".congrat-1").removeClass("animate__bounceIn visible ").addClass("animate__bounceOut");
+            } else if ($('.next').hasClass("transitioner-start-trivia-2")) {
+                $(".congrat-2").removeClass("animate__bounceIn visible ").addClass("animate__bounceOut");
                 $(".next").removeClass("visibleko");
                 $(".mod-one-active").attr('class', 'next first-next');
                 setTimeout(
                     function () {
                         $(".quiz-2").removeClass("hidenow").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
-                    }, 150);
+                    }, 300);
             }
 
             // END OF MODULE 2
-            else if ($('.next').hasClass("transitioner-2")) {
+            else if ($('.next').hasClass("transitioner-start-trivia-2")) {
 
                 //TRANSITIONER 3
                 threemenu.goTo(2);
@@ -3310,32 +3347,44 @@
                         $(".fortaji").addClass("animate__bounceInLeft");
                         $(".chathol").html(" Thank you Tami. I can’t wait for Lesson 4 ");
                     }, 150);
-                $(".seventh-p12-next").addClass("transitioner-3").removeClass("seventh-p12-next");
+                $(".seventh-p12-next").addClass("transitioner-trivia-3").removeClass("seventh-p12-next");
                 $.cookie('mod3cookie', 'complitedi3', {
                     expires: 4000
                 });
 
-                // MODULE 4
+            } else if ($('.next').hasClass("transitioner-trivia-3")) {
+                $("#v1c31")[0].pause();
+                $("#v1c31")[0].currentTime = 0;
 
-            } else if ($('.next').hasClass("transitioner-3")) {
-
-                //TRANSITIONER 3
-                threemenu.goTo(2);
+                $("#cong-sound")[0].play();
+                $('#cong-sound').prop("volume", 0.6);
                 $(".backimg").removeClass("animate__bounceIn").addClass("animate__bounceOut");
                 $(".homer").removeClass("animate__bounceIn").addClass("animate__bounceOut");
                 $(".homeimg").removeClass("showup");
                 $(".fortaji").removeClass("animate__bounceInLeft").addClass("animate__bounceOutLeft");
                 $(".fortemi").addClass("hidaa").addClass("animate__bounceOutRight");
                 $(".optionimg").removeClass("invariable");
+
                 $(".disclaimer").addClass("kwerya").removeClass("gotopper");
                 $(".chathol").removeClass("switchleft").removeClass("animate__bounceIn").addClass("animate__bounceOut").removeClass("visible");
                 $(".fortemi").attr('class', 'fortemi');
                 $(".fortaji").attr('class', 'fortaji');
                 $(".chathol").attr('class', 'chathol');
-                $(".transitioner-3").addClass("transitioner-3a").removeClass("transitioner-3");
                 $(".congrat-3").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
+                $(".transitioner-trivia-3").addClass("transitioner-start-trivia-3").removeClass("transitioner-trivia-3");
 
-            } else if ($('.next').hasClass("transitioner-3a")) {
+                //SHOW RIGHTS TRIVIA 3
+            } else if ($('.next').hasClass("transitioner-start-trivia-3")) {
+                $(".congrat-3").removeClass("animate__bounceIn visible ").addClass("animate__bounceOut");
+                $(".next").removeClass("visibleko");
+                $(".mod-one-active").attr('class', 'next first-next');
+                setTimeout(
+                    function () {
+                        $(".quiz-3").removeClass("hidenow").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
+                    }, 600);
+            }
+
+            else if ($('.next').hasClass("transitioner-3a")) {
                 $(".next").removeClass("visibleko");
 
             } else if ($('.next').hasClass("eighth-p3-next")) {
@@ -3352,7 +3401,7 @@
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
                         $(".chathol").html(" What are they? ");
-                    }, 150);
+                    }, 300);
                 $(".eighth-p3-next").addClass("eighth-p4-next").removeClass("eighth-p3-next");
 
             } else if ($('.next').hasClass("eighth-p4-next")) {
