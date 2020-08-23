@@ -1693,11 +1693,20 @@
     <audio preload="auto" id="v1c21">
         <source src="audio/v1c21.mp3" type="audio/mpeg">
     </audio>
-    <audio preload="auto" id="v1c25">
+    <!-- <audio preload="auto" id="v1c25">
         <source src="audio/v1c25.mp3" type="audio/mpeg">
+    </audio> -->
+    <audio preload="auto" id="also-write-down">
+        <source src="audio/also-write-down.mp3" type="audio/mpeg">
     </audio>
     <audio preload="auto" id="v1c27">
         <source src="audio/v1c27.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="african-what">
+        <source src="audio/african-what.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="african-committee">
+        <source src="audio/african-committee-of-experts.mp3" type="audio/mpeg">
     </audio>
     <audio preload="auto" id="v1c28">
         <source src="audio/v1c28.mp3" type="audio/mpeg">
@@ -1723,6 +1732,40 @@
     </audio>
     <audio preload="auto" id="tutor4">
         <source src="audio/tut4.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Lesson 4 Audio -->
+
+    <audio preload="auto" id="taji-what-is-their-work">
+        <source src="audio/taji-what-is-their-work.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="temi-what-their-work-is">
+        <source src="audio/temi-what-their-work-is.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="police-of-children-rights">
+        <source src="audio/police-of-children-rights.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="something-like-that">
+        <source src="audio/something-like-that.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="taji-how-do-they-help">
+        <source src="audio/taji-how-do-they-help.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="explanation-of-how-they-help">
+        <source src="audio/explanation-of-how-they-help.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio preload="auto" id="taji-let-me-see">
+        <source src="audio/taji-let-me-see.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="temi-not-languages">
+        <source src="audio/temi-not-languages.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="taji-but-you-said-african">
+        <source src="audio/taji-but-you-said-african.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="temi-acceptable-languages">
+        <source src="audio/temi-acceptable-languages.mp3" type="audio/mpeg">
     </audio>
 </body>
 
@@ -3956,17 +3999,20 @@
 
                 clearPage();
 
+                // On fresh load this content is not firing
                 setTimeout(
                     function () {
                         // Show the miniquiz 
                         $(".mini-quiz-1").removeClass("hidenow").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
                         $(".miniquiz-first-question").removeClass("hidenow");
+                        console.log("Miniquiz sequence fire!")
                     }, 300);
+
                 $(".next").attr("class", "next fourtha firsta visibleko mod-one-active eighth-p25-next");
                 // Continue Button from Miniquiz 1 Lesson 4 should set up for the next Section
                 $(".miniquiz-1-continue").click(function () {
                     $(".mini-quiz-1").addClass("hidenow").addClass("animate__bounceOut").removeClass("animate__bounceIn visible");
-                    resetQuizzes();
+                    resetQuizzes()
                     // This loads up the next section after the miniquiz when they click on continue
                     if ($('.next').hasClass("eighth-p25-next")) {
                         $("#a3c24")[0].pause();
@@ -3990,43 +4036,25 @@
             }
             else if ($('.next').hasClass("eighth-p26-next")) {
                 $("#a3c25")[0].pause();
-                $("#v1c25")[0].play();
-                $(".chathol").html(" also write down how you think some children ");
-                $(".eighth-p26-next").addClass("eighth-p27-next").removeClass("eighth-p26-next");
 
-            } else if ($('.next').hasClass("eighth-p26-next")) {
-                $("#v1c25")[0].pause();
-                $("#v1c22")[0].play();
-                $(".chathol").html("  in your community are being treated badly");
-                $(".eighth-p26-next").addClass("eighth-p27-next").removeClass("eighth-p26-next");
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var alsoWriteDownAudio = document.getElementById("also-write-down");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(alsoWriteDownAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
 
-            } else if ($('.next').hasClass("eighth-p26-next")) {
-                $("#v1c22")[0].pause();
-                $("#v1c23")[0].play();
-                $(".chathol").html("by who and what rights are being violet ");
-                $(".eighth-p26-next").addClass("eighth-p27-next").removeClass("eighth-p26-next");
+                alsoWriteDownAudio.play()
 
-            } else if ($('.next').hasClass("eighth-p26-next")) {
-                $("#v1c23")[0].pause();
-                $("#v1c24")[0].play();
-                $(".chathol").html(" then tap next to move to STEP 2");
+                $(".chathol").html("Also write down how you think some children in your community are being treated badly in your community, by who and what rights are being violated. Then tap to continue to Step 2!");
                 $(".eighth-p26-next").addClass("eighth-p27-next").removeClass("eighth-p26-next");
 
             } else if ($('.next').hasClass("eighth-p27-next")) {
-                $("#t1v6")[0].pause();
-                $("#t1v7")[0].play();
-                $(".chathol").html("Step 2");
-                $(".eighth-p27-next").addClass("eighth-p28-next").removeClass("eighth-p27-next");
-
-                // GRAPH 3
-
-            } else if ($('.next').hasClass("eighth-p28-next")) {
-                $("#v1c24")[0].pause();
-                $("#a5c28")[0].play();
-                $(".chathol").html(" Wow, thank  you boys are girls for identifying how  children in your community are being treated badly.<br><br>Tami, what is the next step");
-                $(".eighth-p28-next").addClass("eighth-p29-next").removeClass("eighth-p28-next");
-
-            } else if ($('.next').hasClass("eighth-p29-next")) {
                 $("#a5c28")[0].pause();
                 $("#a3c29")[0].play();
                 $(".fortaji").removeClass("avoidarrow");
@@ -4037,13 +4065,13 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Boys and Girls thank you for helping, the next step is  Local Options");
+                        $(".chathol").html("Boys and Girls thank you for helping, the next step is  Local Options.");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
-                $(".eighth-p29-next").addClass("eighth-p30-next").removeClass("eighth-p29-next");
+                $(".eighth-p27-next").addClass("eighth-p28-next").removeClass("eighth-p27-next");
 
-            } else if ($('.next').hasClass("eighth-p30-next")) {
+            } else if ($('.next').hasClass("eighth-p28-next")) {
                 $("#a3c29")[0].pause();
                 $("#a3c30")[0].play();
                 $(".fortemi").removeClass("animate__bounceInRight");
@@ -4056,11 +4084,11 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" Local options, what does that mean");
+                        $(".chathol").html("Local options, what does that mean?");
                     }, 150);
-                $(".eighth-p30-next").addClass("eighth-p31-next").removeClass("eighth-p30-next");
+                $(".eighth-p28-next").addClass("eighth-p29-next").removeClass("eighth-p28-next");
 
-            } else if ($('.next').hasClass("eighth-p31-next")) {
+            } else if ($('.next').hasClass("eighth-p29-next")) {
                 $("#a3c30")[0].pause();
                 $("#a3c31")[0].play();
                 $(".fortaji").removeClass("avoidarrow");
@@ -4071,44 +4099,383 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" I was getting to that,<br> Local options is very important to deal with the problem. In every community there are ways to talk to other adults, This include talking to a parent or caregiver, a teacher or a person working with children. If that does not help, we can talk to the police and go to the local community leaders (they might be a chief or a traditional leader). The next step would be to go to the court");
+                        $(".chathol").html("I was getting to that,<br> Local options is very important to deal with the problem. In every community there are ways to talk to other adults, This include talking to a parent or caregiver, a teacher or a person working with children. If that does not help, we can talk to the police and go to the local community leaders (they might be a chief or a traditional leader). The next step would be to go to the court");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
+                $(".eighth-p29-next").addClass("eighth-p30-next").removeClass("eighth-p29-next");
+
+            } else if ($('.next').hasClass("eighth-p30-next")) {
+                $("#a3c31")[0].pause();
+                $("#a3c32")[0].play();
+                $(".chathol").html("Each country has different courts that can help. We should always try to do this first starting at the bottom and if it does not help moving on to the court above. If the local court cannot help, then the next court in the same country should be tried first");
+                $(".eighth-p30-next").addClass("eighth-p31-next").removeClass("eighth-p30-next");
+
+            } else if ($('.next').hasClass("eighth-p31-next")) {
+                $("#a3c32")[0].pause();
+                $("#a3c33")[0].play();
+                $(".chathol").html("If nothing in the country helps or in some cases if it takes very long, then we can complain at the large committee that take care of children in Africa (African Committee of Experts on the Rights and Welfare of the Child or ACERWC)");
                 $(".eighth-p31-next").addClass("eighth-p32-next").removeClass("eighth-p31-next");
 
             } else if ($('.next').hasClass("eighth-p32-next")) {
-                $("#a3c31")[0].pause();
-                $("#a3c32")[0].play();
-                $(".chathol").html(" Each country has different courts that can help. We should always try to do this first starting at the bottom and if it does not help moving on to the court above. If the local court cannot help, then the next court in the same country should be tried first");
+                $("#a3c33")[0].pause();
+
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var africanWhatAudio = document.getElementById("african-what");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(africanWhatAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // quadruple the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                africanWhatAudio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("African what?! Who are they?");
+                    }, 150);
                 $(".eighth-p32-next").addClass("eighth-p33-next").removeClass("eighth-p32-next");
 
             } else if ($('.next').hasClass("eighth-p33-next")) {
-                $("#a3c32")[0].pause();
-                $("#a3c33")[0].play();
-                $(".chathol").html("  If nothing in the country helps or in some cases if it takes very long, then we can complain at the large committee that take care of children in Africa (African Committee of Experts on the Rights and Welfare of the Child or ACERWC)");
+                $("#african-what")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var africanCommitteeAudio = document.getElementById("african-committee");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(africanCommitteeAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                africanCommitteeAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("The African Committee of Experts on the Rights and Welfare of the Child or ACERWC is group of very special people, they come from all over Africa.");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
                 $(".eighth-p33-next").addClass("eighth-p34-next").removeClass("eighth-p33-next");
 
             } else if ($('.next').hasClass("eighth-p34-next")) {
-                $("#a3c33")[0].pause();
-                $("#v1c27")[0].play();
-                $(".chathol").html(" Identifying the wrong treatment of children Any child or adult or group or organisation that is in the community or higher in the country or even outside the country can see when there is something wrong with how children is treated and complain about this. There are a few important things to remember to make sure that the problem that can be submitted to the ACERWC");
+                $("#v1c27")[0].pause();
+
+                var tajiQuestionWork = document.getElementById("taji-what-is-their-work");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiQuestionWork);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiQuestionWork.play()
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("All over Africa, what is their work?");
+                    }, 150);
                 $(".eighth-p34-next").addClass("eighth-p35-next").removeClass("eighth-p34-next");
 
             } else if ($('.next').hasClass("eighth-p35-next")) {
-                $("#v1c27")[0].pause();
-                $("#v1c29")[0].play();
-                $(".chathol").html(" <b>Step 2:</b><br>If nothing is done report to…. Like Thandi did to Ms… the NGO lady in Thandi's story.");
+                $("#v1c29")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var temiAnswerWork = document.getElementById("temi-what-their-work-is");
+                // create an audio context and hook up the video element as the source
+                var audioCtx2 = new AudioContext();
+                var source2 = audioCtx2.createMediaElementSource(temiAnswerWork);
+                // create a gain node
+                var gainNode2 = audioCtx2.createGain();
+                gainNode2.gain.value = 4; // double the volume
+                source2.connect(gainNode2);
+                // connect the gain node to an output destination
+                gainNode2.connect(audioCtx2.destination);
+
+                temiAnswerWork.play()
+
+                // $("#temi-what-their-work-is")[0].play();
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("The work of this group of very special people is to make sure your country is protecting your rights, that means, they are making sure your rights are not being violated.");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
                 $(".eighth-p35-next").addClass("eighth-p36-next").removeClass("eighth-p35-next");
 
             } else if ($('.next').hasClass("eighth-p36-next")) {
                 $("#v1c29")[0].pause();
-                $("#v1c30")[0].play();
-                $(".chathol").html(" <b>Step 3:</b><br>If nothing is done, The NGO can help you go to court and report the matter.");
-                $(".eighth-p36-next").addClass("transitioner-trivia-4").removeClass("eighth-p36-next");
-                $.cookie('mod4cookie', 'complitedi4', {
-                    expires: 4000
-                });
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var policeOfChildrenRightsAudio = document.getElementById("police-of-children-rights");
+                // create an audio context and hook up the video element as the source
+                var audioCtx3 = new AudioContext();
+                var source3 = audioCtx3.createMediaElementSource(policeOfChildrenRightsAudio);
+                // create a gain node
+                var gainNode3 = audioCtx3.createGain();
+                gainNode3.gain.value = 4; // double the volume
+                source3.connect(gainNode3);
+                // connect the gain node to an output destination
+                gainNode3.connect(audioCtx3.destination);
+
+                policeOfChildrenRightsAudio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("Are they like Police of Children Rights?");
+                    }, 150);
+                $(".eighth-p36-next").addClass("eighth-p37-next").removeClass("eighth-p36-next");
+            }
+            else if ($('.next').hasClass("eighth-p37-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var somethingLikeThatAudio = document.getElementById("something-like-that");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(somethingLikeThatAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                somethingLikeThatAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("Something like that Taji.");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+                // $(".eighth-p34-next").addClass("transitioner-trivia-4").removeClass("eighth-p34-next");
+                $(".eighth-p37-next").addClass("eighth-p38-next").removeClass("eighth-p37-next");
+
+            } else if ($('.next').hasClass("eighth-p38-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var howDoTheyHelp = document.getElementById("taji-how-do-they-help");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(howDoTheyHelp);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                howDoTheyHelp.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("Ok, so how are they going to help with the problem?");
+                    }, 150);
+                $(".eighth-p38-next").addClass("eighth-p39-next").removeClass("eighth-p38-next");
+
+            } else if ($('.next').hasClass("eighth-p39-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var howTheyHelpAudio = document.getElementById("explanation-of-how-they-help");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(howTheyHelpAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                howTheyHelpAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("The person or organisation who is helping a child or children submit the complaint should then prepare a complaint. This written complaint should be clear in a language used by the ACERWC. Taji can you guess which language?");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+                // $(".eighth-p34-next").addClass("transitioner-trivia-4").removeClass("eighth-p34-next");
+                $(".eighth-p39-next").addClass("eighth-p40-next").removeClass("eighth-p39-next");
+
+            } else if ($('.next').hasClass("eighth-p40-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiLetMeSeeAudio = document.getElementById("taji-let-me-see");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiLetMeSeeAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiLetMeSeeAudio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("Let me see... Khosa, Kinyarwanda, Shona, Chichewa, Kiswahili.");
+                    }, 150);
+                $(".eighth-p40-next").addClass("eighth-p41-next").removeClass("eighth-p40-next");
+
+            } else if ($('.next').hasClass("eighth-p41-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var temiNotLanguagesAudio = document.getElementById("temi-not-languages");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(temiNotLanguagesAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                temiNotLanguagesAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("No, those are not the languages.");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+                // $(".eighth-p34-next").addClass("transitioner-trivia-4").removeClass("eighth-p34-next");
+                $(".eighth-p41-next").addClass("eighth-p42-next").removeClass("eighth-p41-next");
+
+            } else if ($('.next').hasClass("eighth-p42-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiButYouSaidAfricanAudio = document.getElementById("taji-but-you-said-african");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiButYouSaidAfricanAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiButYouSaidAfricanAudio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("But you said African Languages!");
+                    }, 150);
+                $(".eighth-p42-next").addClass("eighth-p43-next").removeClass("eighth-p42-next");
+
+            } else if ($('.next').hasClass("eighth-p43-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var temiLanguagesAudio = document.getElementById("temi-acceptable-languages");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(temiLanguagesAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                temiLanguagesAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("Yes, but the official languages are Arabic, English, French, Portuguese, Spanish, and Swahili. They need to  state names and be signed by the person who is handing the complaint to the committee.");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+                // $(".eighth-p34-next").addClass("transitioner-trivia-4").removeClass("eighth-p34-next");
+                $(".eighth-p43-next").addClass("eighth-p44-next").removeClass("eighth-p43-next");
 
             } else if ($('.next').hasClass("transitioner-trivia-4")) {
                 $("#v1c30")[0].pause();
@@ -6009,7 +6376,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" That is OK Taji, if you tap on the Pink burton it will show you websites of children organizations across Africa, you can send an email to talk to them");
+                        $(".chathol").html(" That is OK Taji, if you tap on the Pink button it will show you websites of children organizations across Africa, you can send an email to talk to them");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -6281,7 +6648,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" Local options, what does that mean");
+                        $(".chathol").html("Local options, what does that mean");
                     }, 150);
                 $(".eighth-p32-next").addClass("eighth-p31-next").removeClass("eighth-p32-next");
 
@@ -6314,7 +6681,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Each country has different courts that can help. We should always try to do this first starting at the bottom and if it does not help moving on to the court above. If the local court cannot help, then the next court in the same country should be tried first");
+                        $(".chathol").html("Each country has different courts that can help. We should always try to do this first starting at the bottom and if it does not help moving on to the court above. If the local court cannot help, then the next court in the same country should be tried first");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -6332,7 +6699,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" If nothing in the country helps or in some cases if it takes very long, then we can complain at the large committee that take care of children in Africa (African Committee of Experts on the Rights and Welfare of the Child or ACERWC");
+                        $(".chathol").html("If nothing in the country helps or in some cases if it takes very long, then we can complain at the large committee that take care of children in Africa (African Committee of Experts on the Rights and Welfare of the Child or ACERWC");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
