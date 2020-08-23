@@ -1961,10 +1961,13 @@
     $(".nextwrong-thirde, .nextright-thirde").click(function () {
         $(".thirde-triv").fadeOut();
         $(".finalis").removeClass("hidenow");
-        if (numVal < 2) {
+        if (numVal <= 1) {
+            $(".totalscore").text(numVal);
+            $(".nextlesson").fadeOut();
             $(".tryagain").removeClass("hidenow");
             $(".adviso").text("Seems you have forgotten your rights. Try again!");
         } else {
+            $(".totalscore").text(numVal);
             $(".tryagain").fadeOut();
             $(".nextlesson").removeClass("hidenow");
             $(".adviso").text("Congratulations. Let's go to the next lesson!");
@@ -1974,7 +1977,6 @@
     var numVal = parseInt($(".totalscore").text());
     $('.righte-button').click(function () {
         ++numVal;
-        $(".totalscore").text(numVal);
     });
 
 
@@ -2030,8 +2032,9 @@
 
         // When the user resits the quiz reset the buttons
         $(".tryagain").addClass("hidenow");
-        $(".tryagain").fadeOut();
+        $(".tryagain").show();
         $(".nextlesson").addClass("hidenow");
+        $(".nextlesson").show();
     }
 
     // When user clicks on Try Again stuff is reset and the current quiz restarts
@@ -2641,6 +2644,7 @@
             } else if ($('.next').hasClass("thirde-next")) {
                 $("#tutor3")[0].pause();
                 $("#tutor3")[0].currentTime = 0;
+
                 $("#tutor4")[0].play();
                 $(".chathol").html("Let's get learning!");
                 $(".chathol").removeClass("switchleft").addClass("switchmid");
@@ -2653,6 +2657,7 @@
             } else if ($('.next').hasClass("fourthe-next")) {
                 $("#tutor4")[0].pause();
                 $("#tutor4")[0].currentTime = 0;
+
                 $(".fortaji").removeClass("animate__bounceInLeft");
                 $(".fortaji").addClass("animate__bounceOutLeft");
                 $(".fortemi").removeClass("animate__bounceInRight");
@@ -2673,18 +2678,16 @@
                         $(".firstula").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
                         $(".disclaimer").addClass("kwerya")
                     }, 800);
-
             }
         }
 
 
         //TRIGGERS THE LESSON SEQUENCE
         else if ($('.next').hasClass("firsta")) {
-
-
             if ($('.next').hasClass("first-next")) {
                 $("#taj1v1")[0].pause();
                 $("#taj1v1")[0].currentTime = 0;
+
                 $("#t1v2")[0].play();
                 $(".fortaji").removeClass("avoidarrow");
                 $(".fortaji").addClass("animate__bounceOutLeft");
