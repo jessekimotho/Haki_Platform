@@ -987,6 +987,38 @@
         </div>
     </div>
 
+    <!-- MINIQUIZ -->
+    <div class="quiz-model hidenow mini-quiz-1 animate__animated animate__bounceOut">
+        <div class="firste-triv miniquiz-first-question hidenow nor-cont">
+            <div class="incorrect firste-wrong hidenow">
+                <span class="Incorrected">Incorrect</span>
+                <span class="incorrected-text">'Children' refers to anyone who is below the age of majority. In most
+                    countries, that age is 18. So, a child is anyone below the age of 18.</span>
+                <div class="go2secq nextwrong-firste wronge-button buttoner animate__animated animate__jello">Try again
+                </div>
+            </div>
+
+            <div class="correct firste-correct hidenow ">
+                <span class="Incorrected">Correct</span>
+                <span class="incorrected-text">'Children' refers to anyone who is below the age of majority. In most
+                    countries, that age is 18. So, a child is anyone below the age of 18.</span>
+                <div class="righte-button buttoner animate__animated animate__jello miniquiz-1-continue">
+                    Continue
+                </div>
+            </div>
+
+            <div class="trivo-cont trivo-firste">
+                <span class="numbari">1</span>
+                <h1 class="iyotu">Which Rights Violation for children on the streets?</h1>
+                <div class="go2firstq buttoner animate__animated animate__jello wrong-firste">Right to education</div>
+                <div class="go2firstq buttoner animate__animated animate__jello wrong-firste">Right to a name</div>
+                <div class="go2firstq buttoner animate__animated animate__jello wrong-firste">Right to a nationality
+                </div>
+                <div class="go2firstq buttoner animate__animated animate__jello right-firste">Right to grow</div>
+            </div>
+        </div>
+    </div>
+
     <!-- CANVAS THAT CHANGES COLOR ON CLICK/TOUCH -->
     <canvas id="c"></canvas>
 
@@ -3915,27 +3947,48 @@
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
-                $(".eighth-p24-next").addClass("eighth-p25-next").removeClass("eighth-p24-next");
+                $(".eighth-p24-next").addClass("transitioner-start-mini-trivia-1").removeClass("eighth-p24-next");
 
+                // INSERT MINIQUIZ HERE
+            } else if ($('.next').hasClass("transitioner-start-mini-trivia-1")) {
+                $(".next").removeClass("visibleko");
+                $(".mod-one-active").attr('class', 'next first-next');
 
-            } else if ($('.next').hasClass("eighth-p25-next")) {
-                $("#a3c24")[0].pause();
-                $("#a3c25")[0].play();
-                $(".fortemi").removeClass("animate__bounceInRight");
-                //$(".fortemi").addClass("inviza");
-                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                clearPage();
 
                 setTimeout(
                     function () {
-                        $(".chathol").removeClass("switchleft");
-                        $(".fortaji").addClass("avoidarrow");
-                        $(".fortaji").removeClass("animate__bounceOutLeft");
-                        $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" Thank you Boys and Girls");
-                    }, 150);
-                $(".eighth-p25-next").addClass("eighth-p26-next").removeClass("eighth-p25-next");
-
-            } else if ($('.next').hasClass("eighth-p26-next")) {
+                        // Show the miniquiz 
+                        $(".mini-quiz-1").removeClass("hidenow").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
+                        $(".miniquiz-first-question").removeClass("hidenow");
+                    }, 300);
+                $(".next").attr("class", "next fourtha firsta visibleko mod-one-active eighth-p25-next");
+                // Continue Button from Miniquiz 1 Lesson 4 should set up for the next Section
+                $(".miniquiz-1-continue").click(function () {
+                    $(".mini-quiz-1").addClass("hidenow").addClass("animate__bounceOut").removeClass("animate__bounceIn visible");
+                    resetQuizzes();
+                    // This loads up the next section after the miniquiz when they click on continue
+                    if ($('.next').hasClass("eighth-p25-next")) {
+                        $("#a3c24")[0].pause();
+                        $("#a3c25")[0].play();
+                        $(".fortemi").removeClass("animate__bounceInRight");
+                        //$(".fortemi").addClass("inviza");
+                        $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                        $(".chathol").addClass("switchleft").addClass("animate__bounceIn").removeClass("animate__bounceOut").addClass("visible");
+                        setTimeout(
+                            function () {
+                                restorePage();
+                                $(".chathol").removeClass("switchleft");
+                                $(".fortaji").addClass("avoidarrow");
+                                $(".fortaji").removeClass("animate__bounceOutLeft");
+                                $(".fortaji").addClass("animate__bounceInLeft");
+                                $(".chathol").html(" Thank you Boys and Girls");
+                            }, 150);
+                        $(".eighth-p25-next").addClass("eighth-p26-next").removeClass("eighth-p25-next");
+                    }
+                });
+            }
+            else if ($('.next').hasClass("eighth-p26-next")) {
                 $("#a3c25")[0].pause();
                 $("#v1c25")[0].play();
                 $(".chathol").html(" also write down how you think some children ");
@@ -3962,7 +4015,7 @@
             } else if ($('.next').hasClass("eighth-p27-next")) {
                 $("#t1v6")[0].pause();
                 $("#t1v7")[0].play();
-                $(".chathol").html(" Step 2");
+                $(".chathol").html("Step 2");
                 $(".eighth-p27-next").addClass("eighth-p28-next").removeClass("eighth-p27-next");
 
                 // GRAPH 3
@@ -4692,6 +4745,29 @@
             }, 400);
     });
 
+    function clearPage() {
+        // Remove the content on the page
+        $(".backimg").removeClass("animate__bounceIn").addClass("animate__bounceOut");
+        $(".homer").removeClass("animate__bounceIn").addClass("animate__bounceOut");
+        $(".homeimg").removeClass("showup");
+        $(".fortaji").removeClass("animate__bounceInLeft").addClass("animate__bounceOutLeft");
+        $(".fortemi").addClass("hidaa").addClass("animate__bounceOutRight");
+        $(".optionimg").removeClass("invariable");
+
+        $(".disclaimer").addClass("kwerya").removeClass("gotopper");
+        $(".chathol").removeClass("switchleft").removeClass("animate__bounceIn").addClass("animate__bounceOut").removeClass("visible");
+        $(".fortemi").attr('class', 'fortemi');
+        $(".fortaji").attr('class', 'fortaji');
+        $(".chathol").attr('class', 'chathol');
+    }
+
+    function restorePage() {
+        //Add the static page content
+        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+        $(".homer").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+        $(".homeimg").addClass("showup");
+        $(".disclaimer").removeClass("kwerya").addClass("gotopper");
+    }
 
     //BACK NAVIGATION IN CONVERSATION
     $(".backer").click(function () {
