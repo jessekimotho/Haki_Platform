@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thindi's Story</title>
     <link rel="stylesheet" href="sample.css">
-    <script src="jquery.min.js"></script>
-    <script src="anime.min.js"></script>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/anime.min.js"></script>
     <link rel="stylesheet" href="fonts/stylesheet.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="manifest.json" />
     <!-- ios support -->
     <link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
@@ -48,7 +48,7 @@
     var animations = [];
     var circles = [];
 
-    var colorPicker = (function() {
+    var colorPicker = (function () {
         var colors = ["#FF6138", "#FFBE53", "#2980B9", "#282741"];
         var index = 0;
 
@@ -104,7 +104,7 @@
             r: targetR,
             duration: Math.max(targetR / 2, minCoverDuration),
             easing: "easeOutQuart",
-            complete: function() {
+            complete: function () {
                 bgColor = pageFill.fill;
                 removeAnimation(fillAnimation);
             }
@@ -142,10 +142,10 @@
         }
         var particlesAnimation = anime({
             targets: particles,
-            x: function(particle) {
+            x: function (particle) {
                 return particle.x + anime.random(rippleSize, -rippleSize);
             },
-            y: function(particle) {
+            y: function (particle) {
                 return particle.y + anime.random(rippleSize * 1.15, -rippleSize * 1.15);
             },
             r: 0,
@@ -165,11 +165,11 @@
         return a;
     }
 
-    var Circle = function(opts) {
+    var Circle = function (opts) {
         extend(this, opts);
     }
 
-    Circle.prototype.draw = function() {
+    Circle.prototype.draw = function () {
         ctx.globalAlpha = this.opacity || 1;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
@@ -188,18 +188,18 @@
 
     var animate = anime({
         duration: Infinity,
-        update: function() {
+        update: function () {
             ctx.fillStyle = bgColor;
             ctx.fillRect(0, 0, cW, cH);
-            animations.forEach(function(anim) {
-                anim.animatables.forEach(function(animatable) {
+            animations.forEach(function (anim) {
+                anim.animatables.forEach(function (animatable) {
                     animatable.target.draw();
                 });
             });
         }
     });
 
-    var resizeCanvas = function() {
+    var resizeCanvas = function () {
         cW = window.innerWidth;
         cH = window.innerHeight;
         c.width = cW * devicePixelRatio;
@@ -223,7 +223,7 @@
     })();
 
     function handleInactiveUser() {
-        var inactive = setTimeout(function() {
+        var inactive = setTimeout(function () {
             fauxClick(cW / 2, cH / 2);
         }, 2000);
 
@@ -238,7 +238,7 @@
     }
 
     function startFauxClicking() {
-        setTimeout(function() {
+        setTimeout(function () {
             fauxClick(anime.random(cW * .2, cW * .8), anime.random(cH * .2, cH * .8));
             startFauxClicking();
         }, anime.random(200, 900));
@@ -253,43 +253,43 @@
 </script>
 
 <script>
-    $(".startgame").click(function() {
+    $(".startgame").click(function () {
         $(".showcontent").fadeOut();
         $(".instructions").removeClass("hidenow");
     });
-    $(".scenario1").click(function() {
+    $(".scenario1").click(function () {
         $(".instructions").fadeOut();
         $(".scene1").removeClass("hidenow");
     });
-    $(".auntie").click(function() {
+    $(".auntie").click(function () {
         $(".scene1").fadeOut();
         $(".gocity").removeClass("hidenow");
     });
-    $(".stayhome").click(function() {
+    $(".stayhome").click(function () {
         $(".scene1").fadeOut();
         $(".homa").removeClass("hidenow");
     });
-    $(".houseworker").click(function() {
+    $(".houseworker").click(function () {
         $(".gocity").fadeOut();
         $(".homa").fadeOut();
         $(".housework").removeClass("hidenow");
     });
-    $(".still-houseworker").click(function() {
+    $(".still-houseworker").click(function () {
         $(".gocity").fadeOut();
         $(".homa").fadeOut();
         $(".forced-housework").removeClass("hidenow");
     });
-    $(".tell").click(function() {
+    $(".tell").click(function () {
         $(".housework").fadeOut();
         $(".forced-housework").fadeOut();
         $(".concl").removeClass("hidenow");
     });
-    $(".still-tell").click(function() {
+    $(".still-tell").click(function () {
         $(".housework").fadeOut();
         $(".forced-housework").fadeOut();
         $(".still-concl").removeClass("hidenow");
     });
-    $(".finisha").click(function() {
+    $(".finisha").click(function () {
         $(".concl").fadeOut();
         $(".still-concl").fadeOut();
         $(".finishida").removeClass("hidenow");
