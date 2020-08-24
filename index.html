@@ -770,9 +770,9 @@
 
             <div class="trivo-cont trivo-seconde">
                 <span class="numbari">2</span>
-                <h1 class="iyotu">Children can report to the committee by themselves"</h1>
-                <div class="go2firstq buttoner animate__animated animate__jello wrong-seconde">TRUE</div>
-                <div class="go2firstq buttoner animate__animated animate__jello right-seconde">FALSE</div>
+                <h1 class="iyotu">Children can report to the committee by themselves</h1>
+                <div class="go2firstq buttoner animate__animated animate__jello right-seconde">TRUE</div>
+                <div class="go2firstq buttoner animate__animated animate__jello wrong-seconde">FALSE</div>
             </div>
 
         </div>
@@ -802,8 +802,8 @@
 
             <div class="trivo-cont trivo-thirde">
                 <span class="numbari">3</span>
-                <h1 class="iyotu">Which of the following is true?"</h1>
-                <div class="go2firstq buttoner animate__animated animate__jello wrong-thirde">Children have a role in
+                <h1 class="iyotu">Which of the following is true?</h1>
+                <div class="go2firstq buttoner animate__animated animate__jello right-thirde">Children have a role in
                     reporting violence</div>
                 <div class="go2firstq buttoner animate__animated animate__jello wrong-thirde">Only NGOs can report
                     violence
@@ -980,7 +980,7 @@
                 <div class="but-howl">
                     <div class="tryagain playagain buttoner animate__animated animate__jello hidenow">Try Again</div>
                     <div class="gobackhome-4 go2firstq buttoner animate__animated animate__jello nextlesson hidenow">
-                        Get your certificate</div>
+                        Finish</div>
                 </div>
             </div>
 
@@ -2055,7 +2055,10 @@
 
 
 <script>
-
+    var numVal = 0;
+    $('.righte-button').click(function () {
+        numVal++;
+    });
     // QUIZZES
 
     // Launch Screen 
@@ -2126,12 +2129,6 @@
             $(".adviso").text("Congratulations! You passed the quiz!");
         }
     });
-
-    var numVal = parseInt($(".totalscore").text());
-    $('.righte-button').click(function () {
-        ++numVal;
-    });
-
 
     /*
     When one successfully completes a Quiz, the quiz results are reset.
@@ -2997,7 +2994,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html("My favourite game is Tag which I play with my friend Halima.Our neighbour from Congo.<br><br>Do you know children who come into our country as refugees such as Halima should have the same rights as children who are born in the country as you?");
+                        $(".chathol").html("My favourite game is Tag which I play with my friend Hamila. Our neighbour from Congo.<br><br>Do you know children who come into our country as refugees such as Hamila should have the same rights as children who are born in the country as you?");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -3033,7 +3030,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" So, does that mean that Halima has a right to quality education like me? ");
+                        $(".chathol").html(" So, does that mean that Hamila has a right to quality education like me? ");
                     }, 150);
                 $(".sixt-p6-next").addClass("sixthe-p6-next").removeClass("sixt-p6-next");
 
@@ -3186,7 +3183,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html("I think Mummy, Daddy, Teacher , the Chief, the police And most of all the president.");
+                        $(".chathol").html("I think Mummy, Daddy, Teacher, the Chief, the Police and most of all, the President.");
                     }, 150);
                 $(".six-p1-next").addClass("six-p2-next").removeClass("six-p1-next");
 
@@ -3202,7 +3199,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html("Yes, Yes, Yes, It is the job of the entire community to make sure that children’s  rights are protected.The community is also made up of everyone! Parents, children, neighbors, the police, the government and many other people");
+                        $(".chathol").html("Yes, Yes, Yes, It is the job of the entire community to make sure that children’s rights are protected. The community is also made up of everyone! Parents, children, neighbors, the police, the government and many other people.");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -3227,7 +3224,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html("But Temi,  do I have to do anything to also make sure my community is happy and safe?");
+                        $(".chathol").html("But Temi, do I have to do anything to also make sure my community is happy and safe?");
                     }, 150);
                 $(".six-p4-next").addClass("sixt-p8-next").removeClass("six-p4-next");
 
@@ -3606,7 +3603,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html("No Taji. There are steps which are called reporting processes” which you must follow if you want the Committee to help you.<br>First you will go to a Children’s Organisation and ask them to help you submit a complaint to the Committee. <br><br>They will then help you write a letter to the Committee. When the Committee receives your letter they will try to help solve your problem ");
+                        $(".chathol").html("No Taji. There are steps which are called reporting processes, which you must follow if you want the Committee to help you.<br>First you will go to a Children’s Organisation and ask them to help you submit a complaint to the Committee. <br><br>They will then help you write a letter to the Committee. When the Committee receives your letter they will try to help solve your problem ");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -3632,7 +3629,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" So does that mean I can’t report to the Committee by myself? ");
+                        $(".chathol").html(" So, does that mean I can’t report to the Committee by myself?");
                     }, 150);
                 $(".seventh-p10-next").addClass("seventh-p11-next").removeClass("seventh-p10-next");
 
@@ -3764,7 +3761,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Step 1 we call it the Identify step ");
+                        $(".chathol").html("Step 1 we call it the IDENTIFY step.");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -3785,7 +3782,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Taji at this step a child, group of children, adults or organizations see that children are not being treated well and their rights are being violated.<br><br>Taji, Can you say how children can be treated badly");
+                        $(".chathol").html("Taji at this step a child, group of children, adults or organizations see that children are not being treated well and their rights are being violated.<br><br>Taji, Can you say how children can be treated badly?");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -3806,7 +3803,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" I think when children are on the street and are not in school.it is really bad because they can not go to school or go to the hospital when they are sick");
+                        $(".chathol").html("I think when children are on the street and are not in school. It is really bad because they can not go to school or go to the hospital when they are sick.");
                     }, 150);
                 $(".eighth-p7-next").addClass("eighth-p9-next").removeClass("eighth-p7-next");
 
@@ -3829,7 +3826,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Very good Taji, what rights are being violated");
+                        $(".chathol").html("Very good Taji, what rights are being violated?");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -3850,7 +3847,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" Education, Health also Tami, bad people can make them work so that they can get money");
+                        $(".chathol").html("Education, Health, also Tami bad people can make them work so that they can get money.");
                     }, 150);
                 $(".eighth-p10-next").addClass("eighth-p12-next").removeClass("eighth-p10-next");
 
@@ -3866,7 +3863,7 @@
                 $("#a3c10")[0].currentTime = 0;
 
                 $("#a3c12")[0].play();
-                $(".chathol").html("  oh yah, for girls they can be touched in a bad way");
+                $(".chathol").html("Oh yah, for girls they can be touched in a bad way.");
                 $(".eighth-p12-next").addClass("eighth-p13-next").removeClass("eighth-p12-next");
 
             } else if ($('.next').hasClass("eighth-p13-next")) {
@@ -3882,7 +3879,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Very True Taji");
+                        $(".chathol").html("Very True Taji!");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -3903,7 +3900,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" So What happens next");
+                        $(".chathol").html(" So what happens next?");
                     }, 150);
                 $(".eighth-p14-next").addClass("eighth-p15-next").removeClass("eighth-p14-next");
 
@@ -3920,7 +3917,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" As a child you can talk to organizations that work for children. Do you know any organizations that work for children.");
+                        $(".chathol").html(" As a child you can talk to organizations that work for children. Do you know any organizations that work for children?");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -3941,7 +3938,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" Yes, Save the Children and Let Children Play…");
+                        $(".chathol").html("Yes, Save the Children and Let Children Play…");
                     }, 150);
                 $(".eighth-p16-next").addClass("eighth-p17-next").removeClass("eighth-p16-next");
 
@@ -3958,7 +3955,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" That is OK Taji, if you tap on the Pink burton it will show you websites of children organizations across Africa, you can send an email to talk to them");
+                        $(".chathol").html("That is OK Taji, if you tap on the Pink button it will show you websites of children organizations across Africa, you can send an email to talk to them.");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -3980,7 +3977,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" Thank you Tami, so what do the organizations do?");
+                        $(".chathol").html("Thank you Tami, so what do the organizations do?");
                     }, 150);
                 $(".eighth-p18-next").addClass("eighth-p19-next").removeClass("eighth-p18-next");
 
@@ -4473,8 +4470,8 @@
                 $(".eighth-p38-next").addClass("eighth-p39-next").removeClass("eighth-p38-next");
 
             } else if ($('.next').hasClass("eighth-p39-next")) {
-                $("taji-how-do-they-help")[0].pause();
-                $("taji-how-do-they-help")[0].currentTime = 0;
+                $("#taji-how-do-they-help")[0].pause();
+                $("#taji-how-do-they-help")[0].currentTime = 0;
 
                 // Mastering the audio in code Increase Volume — Move this to a function
                 var howTheyHelpAudio = document.getElementById("explanation-of-how-they-help");
@@ -4634,8 +4631,8 @@
                 $(".eighth-p43-next").addClass("eighth-p44-next").removeClass("eighth-p43-next");
 
             } else if ($('.next').hasClass("eighth-p44-next")) {
-                $("#temi-acceptable-languages").pause();
-                $("#temi-acceptable-languages").currentTime = 0;
+                $("#temi-acceptable-languages")[0].pause();
+                $("#temi-acceptable-languages")[0].currentTime = 0;
 
                 // Mastering the audio in code Increase Volume — Move this to a function
                 var tajiWhatNextStep4Audio = document.getElementById("taji-what-next-step-4");
@@ -5138,7 +5135,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html("Step 6: Decision");
+                        $(".chathol").html("STEP 6: DECISION");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -5348,7 +5345,7 @@
                 var source = audioCtx.createMediaElementSource(tajiThankYouTamiAudio);
                 // create a gain node
                 var gainNode = audioCtx.createGain();
-                gainNode.gain.value = 5; // double the volume
+                gainNode.gain.value = 6; // double the volume
                 source.connect(gainNode);
                 // connect the gain node to an output destination
                 gainNode.connect(audioCtx.destination);
@@ -5369,8 +5366,8 @@
                 $(".eighth-p66-next").addClass("eighth-p67-next").removeClass("eighth-p66-next");
 
             } else if ($('.next').hasClass("eighth-p67-next")) {
-                $("#taji-thank-you-tami").pause();
-                $("#taji-thank-you-tami").currentTime = 0;
+                $("#taji-thank-you-tami")[0].pause();
+                $("#taji-thank-you-tami")[0].currentTime = 0;
 
                 // Mastering the audio in code Increase Volume — Move this to a function
                 var tamiWelcomeTajiAudio = document.getElementById("tami-you-are-welcome-taji");
@@ -5394,7 +5391,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html("You are welcome, it was a pleasure Taji going through the training with you. Before we finish there is the last Rights Trivia. What Are Children Rights");
+                        $(".chathol").html("You are welcome, it was a pleasure Taji going through the training with you. Before we finish there is the last Rights Trivia. What Are Children Rights!");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -5402,8 +5399,8 @@
                 $(".eighth-p67-next").addClass("transitioner-trivia-4").removeClass("eighth-p67-next");
 
             } else if ($('.next').hasClass("transitioner-trivia-4")) {
-                $("#tami-you-are-welcome-taji").pause();
-                $("#tami-you-are-welcome-taji").currentTime = 0;
+                $("#tami-you-are-welcome-taji")[0].pause();
+                $("#tami-you-are-welcome-taji")[0].currentTime = 0;
 
                 $("#cong-sound")[0].play();
                 $('#cong-sound').prop("volume", 0.4);
@@ -6272,7 +6269,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html("My favourite game is tag which I play with my friend Halima. Halima is a refugee from Congo.Do you know children who come into a country as refugees such as Halima have the same rights as children who are born in that country? ");
+                        $(".chathol").html("My favourite game is tag which I play with my friend Hamila. Hamila is a refugee from Congo. Do you know children who come into a country as refugees such as Hamila have the same rights as you? ");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -6325,7 +6322,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" So, does that mean that Halima has a right to quality education like me? ");
+                        $(".chathol").html(" So, does that mean that Hamila has a right to quality education like me? ");
                     }, 150);
                 $(".sixt-p6-next").addClass("sixthe-p7-next").removeClass("sixt-p6-next");
 
@@ -6943,7 +6940,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" No Taji. There are steps which are called reporting processes” which you must follow if you want the Committee to help you.First you will go to a Children’s Organisation and ask them to help you submit a complaint to the Committee. <br><br>They will then help you write a letter to the Committee. When the Committee receives your letter they will try to help solve your problem");
+                        $(".chathol").html(" No Taji. There are steps which are called reporting processes which you must follow if you want the Committee to help you.First you will go to a Children’s Organisation and ask them to help you submit a complaint to the Committee. <br><br>They will then help you write a letter to the Committee. When the Committee receives your letter they will try to help solve your problem");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -7099,7 +7096,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Step 1 we call it the Identify step");
+                        $(".chathol").html(" STEP 1: we call it the IDENTIFY step");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -7300,7 +7297,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" That is OK Taji, if you tap on the Pink button it will show you websites of children organizations across Africa, you can send an email to talk to them");
+                        $(".chathol").html(" That is ok Taji, if you tap on the Pink button it will show you websites of children organizations across Africa, you can send an email to talk to them");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -7334,7 +7331,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" The organizations will help the child write a complaint");
+                        $(".chathol").html("The organizations will help the child write a complaint.");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -7353,7 +7350,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html("Wait a minute TAMI, What is a complaint");
+                        $(".chathol").html("Wait a minute TAMI, What is a complaint?");
                     }, 150);
                 $(".eighth-p22-next").addClass("eighth-p21-next").removeClass("eighth-p22-next");
 
@@ -7369,7 +7366,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" A complaint is  a written document that show how children are being treated badly, for how long and how many children are being treated badly. It also has what rights are being violated and who is violating them");
+                        $(".chathol").html("A complaint is  a written document that show how children are being treated badly, for how long and how many children are being treated badly. It also has what rights are being violated and who is violating them.");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -7389,7 +7386,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html("That is interesting Tami");
+                        $(".chathol").html("That is interesting Tami!");
                     }, 150);
                 $(".eighth-p24-next").addClass("eighth-p23-next").removeClass("eighth-p24-next");
 
@@ -7407,7 +7404,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" so for children living on the street,");
+                        $(".chathol").html("So for children living on the street...");
                     }, 150);
                 $(".eighth-p25-next").addClass("eighth-p24-next").removeClass("eighth-p25-next");
 
@@ -7442,6 +7439,7 @@
 
             } else if ($('.next').hasClass("eighth-p26-next")) {
                 $("#v1c21")[0].pause();
+                $("#v1c18")[0].pause();
                 $("#a3c24")[0].play();
                 $(".fortaji").removeClass("avoidarrow");
                 $(".fortaji").addClass("animate__bounceOutLeft");
@@ -7451,7 +7449,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Aaaah, Taji…. Can we get help from the boys and girls who are reading or hearing us. Boys and girls try the next rights trivia. Remember you can always press back to remind yourself");
+                        $(".chathol").html("Aaaah, Taji… Can we get help from the boys and girls who are reading or hearing us. Boys and girls try the next rights trivia. Remember you can always press back to remind yourself");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -7470,7 +7468,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" Thank you Boys and Girls");
+                        $(".chathol").html("Thank you Boys and Girls.");
                     }, 150);
                 $(".eighth-p27-next").addClass("eighth-p26-next").removeClass("eighth-p27-next");
 
@@ -7488,7 +7486,7 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" also write down how you think some children in your community are being treated badly, by who and what rights are being violet then tap next to move to STEP 2");
+                        $(".chathol").html("Also write down how you think some children in your community are being treated badly, by who and what rights are being violet then tap me to move to STEP 2");
                     }, 150);
                 $(".eighth-p28-next").addClass("eighth-p27-next").removeClass("eighth-p28-next");
 
@@ -7553,7 +7551,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Boys and Girls thank you for helping, the next step is  Local Options");
+                        $(".chathol").html("Boys and Girls thank you for helping! STEP 2: The next step is LOCAL OPTIONS!");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
@@ -7587,7 +7585,7 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html("I was getting to that,<br> Local options is very important to deal with the problem. In every community there are ways to talk to other adults, This include talking to a parent or caregiver, a teacher or a person working with children. If that does not help, we can talk to the police and go to the local community leaders (they might be a chief or a traditional leader). The next step would be to go to the court ");
+                        $(".chathol").html("I was getting to that,<br> Local options is very important to deal with the problem. In every community there are ways to talk to other adults, This include talking to a parent or caregiver, a teacher or a person working with children. If that does not help, we can talk to the police and go to the local community leaders (they might be a chief or a traditional leader). The next step would be to GO TO THE COURT.");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
