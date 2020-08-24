@@ -1767,6 +1767,81 @@
     <audio preload="auto" id="temi-acceptable-languages">
         <source src="audio/temi-acceptable-languages.mp3" type="audio/mpeg">
     </audio>
+    <audio preload="auto" id="taji-what-next-step-4">
+        <source src="audio/taji-what-next-step-4.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="temi-review">
+        <source src="audio/temi-review.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="taji-that-wont-be-nice">
+        <source src="audio/taji-that-wont-be-nice.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio preload="auto" id="temi-trusted-organization">
+        <source src="audio/temi-trusted-organization.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="taji-what-if-not-sent-back">
+        <source src="audio/taji-what-if-not-sent-back.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="temi-hearing-step">
+        <source src="audio/temi-hearing-step.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="taji-what-does-hearing-mean">
+        <source src="audio/taji-what-does-hearing-mean.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="temi-hearing-means-listening">
+        <source src="audio/temi-hearing-means-listening.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="taji-who-he-thinks-should-be-heard">
+        <source src="audio/taji-who-he-thinks-should-be-heard.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="temi-all-of-them">
+        <source src="audio/temi-all-of-them.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="taji-those-are-alot">
+        <source src="audio/taji-those-are-alot.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="temi-determine-complaint">
+        <source src="audio/temi-determine-complaint.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="taji-yipee">
+        <source src="audio/taji-yipee.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="temi-final-step">
+        <source src="audio/temi-final-step.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="taji-oh-wow">
+        <source src="audio/taji-oh-wow.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="temi-decision">
+        <source src="audio/temi-decision.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="taji-what-does-decision-mean">
+        <source src="audio/taji-what-does-decision-mean.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="temi-explanation-of-decision">
+        <source src="audio/temi-explanation-of-decision.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="taji-is-that-it">
+        <source src="audio/taji-is-that-it.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="temi-not-really">
+        <source src="audio/temi-not-really.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="taji-what-can-children-do">
+        <source src="audio/taji-what-can-children-do.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="tami-continue-working-with">
+        <source src="audio/tami-continue-working-with.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="taji-thank-you-tami">
+        <source src="audio/taji-thank-you-tami.mp3" type="audio/mpeg">
+    </audio>
+    <audio preload="auto" id="tami-you-are-welcome-taji">
+        <source src="audio/tami-you-are-welcome-taji.mp3" type="audio/mpeg">
+    </audio>
+
+
 </body>
 
 <!-- SCRIPT THAT CHANGES BACKGROUND COLOR ON CLICK -->
@@ -4426,7 +4501,7 @@
                 var source = audioCtx.createMediaElementSource(tajiButYouSaidAfricanAudio);
                 // create a gain node
                 var gainNode = audioCtx.createGain();
-                gainNode.gain.value = 4; // double the volume
+                gainNode.gain.value = 6; // double the volume
                 source.connect(gainNode);
                 // connect the gain node to an output destination
                 gainNode.connect(audioCtx.destination);
@@ -4476,6 +4551,713 @@
                     }, 150);
                 // $(".eighth-p34-next").addClass("transitioner-trivia-4").removeClass("eighth-p34-next");
                 $(".eighth-p43-next").addClass("eighth-p44-next").removeClass("eighth-p43-next");
+
+            } else if ($('.next').hasClass("eighth-p44-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiWhatNextStep4Audio = document.getElementById("taji-what-next-step-4");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiWhatNextStep4Audio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiWhatNextStep4Audio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("What happens after that?");
+                    }, 150);
+                $(".eighth-p44-next").addClass("eighth-p45-next").removeClass("eighth-p44-next");
+
+            } else if ($('.next').hasClass("eighth-p45-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var temiReviewAudio = document.getElementById("temi-review");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(temiReviewAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                temiReviewAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("REVIEW When the committee receives the complaint, it will first review it to see if the requirements are right. If it is not right, they might send it back to the country.");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+
+                $(".eighth-p45-next").addClass("eighth-p46-next").removeClass("eighth-p45-next");
+
+            } else if ($('.next').hasClass("eighth-p46-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiThatWontBeNiceAudio = document.getElementById("taji-that-wont-be-nice");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiThatWontBeNiceAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiThatWontBeNiceAudio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("That will not be nice!");
+                    }, 150);
+                $(".eighth-p46-next").addClass("eighth-p47-next").removeClass("eighth-p46-next");
+
+            } else if ($('.next').hasClass("eighth-p47-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var temiTrustedOrganAudio = document.getElementById("temi-trusted-organization");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(temiTrustedOrganAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                temiTrustedOrganAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("Yes, that is why it is important for children to work with a trusted adult or organization to identify which group of children are being treated badly, How they are being treated badly, From when they have been treated badly and What rights are being violated.");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+
+                $(".eighth-p47-next").addClass("eighth-p48-next").removeClass("eighth-p47-next");
+
+            } else if ($('.next').hasClass("eighth-p48-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiWhatIfNotSentBackAudio = document.getElementById("taji-what-if-not-sent-back");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiWhatIfNotSentBackAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiWhatIfNotSentBackAudio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("What if they are not sent back?");
+                    }, 150);
+                $(".eighth-p48-next").addClass("eighth-p49-next").removeClass("eighth-p48-next");
+
+            } else if ($('.next').hasClass("eighth-p49-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var temiHearingStepAudio = document.getElementById("temi-hearing-step");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(temiHearingStepAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                temiHearingStepAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("Step 5. They move to the next step which we will call Hearing!");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+
+                $(".eighth-p49-next").addClass("eighth-p50-next").removeClass("eighth-p49-next");
+
+            } else if ($('.next').hasClass("eighth-p50-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiWhatDoesHearingMeanAudio = document.getElementById("taji-what-does-hearing-mean");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiWhatDoesHearingMeanAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiWhatDoesHearingMeanAudio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("What does that mean, I thought they have been hearing what we are saying through out or should we use sign language?");
+                    }, 150);
+                $(".eighth-p50-next").addClass("eighth-p51-next").removeClass("eighth-p50-next");
+
+            } else if ($('.next').hasClass("eighth-p51-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var temiHearingMeansAudio = document.getElementById("temi-hearing-means-listening");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(temiHearingMeansAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                temiHearingMeansAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("No Taji, hearing  means listening to all the people who are involved in the complaint, who do you think should be heard by the special committee?");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+
+                $(".eighth-p51-next").addClass("eighth-p52-next").removeClass("eighth-p51-next");
+
+            } else if ($('.next').hasClass("eighth-p52-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiWhoHeThinksShouldBeHeardAudio = document.getElementById("taji-who-he-thinks-should-be-heard");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiWhoHeThinksShouldBeHeardAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 6; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiWhoHeThinksShouldBeHeardAudio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("I think children, the police and also the council of elders.");
+                    }, 150);
+                $(".eighth-p52-next").addClass("eighth-p53-next").removeClass("eighth-p52-next");
+
+            } else if ($('.next').hasClass("eighth-p53-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var temiAllofThemAudio = document.getElementById("temi-all-of-them");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(temiAllofThemAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 5; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                temiAllofThemAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("Yes, Taji all those, but the committee can also call government people like the department of children services, the Attorney General and other NGOs.");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+
+                $(".eighth-p53-next").addClass("eighth-p54-next").removeClass("eighth-p53-next");
+
+            } else if ($('.next').hasClass("eighth-p54-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiThoseAreALot = document.getElementById("taji-those-are-alot");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiThoseAreALot);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiThoseAreALot.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("Those are a lot of people!");
+                    }, 150);
+                $(".eighth-p54-next").addClass("eighth-p55-next").removeClass("eighth-p54-next");
+
+            } else if ($('.next').hasClass("eighth-p55-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var temiDetermineComplaintAudio = document.getElementById("temi-determine-complaint");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(temiDetermineComplaintAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                temiDetermineComplaintAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("Yes, Taji, this is to help the committee determine if the complaint has all the right information, the committee will look at the complaint and ask government to also respond to the complaint.");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+
+                $(".eighth-p55-next").addClass("eighth-p56-next").removeClass("eighth-p55-next");
+
+            } else if ($('.next').hasClass("eighth-p56-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiYipeeAudio = document.getElementById("taji-yipee");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiYipeeAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiYipeeAudio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("Yipee!! So what happens next?");
+                    }, 150);
+                $(".eighth-p56-next").addClass("eighth-p57-next").removeClass("eighth-p56-next");
+
+            } else if ($('.next').hasClass("eighth-p57-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var temiFinalStepAudio = document.getElementById("temi-final-step");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(temiFinalStepAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                temiFinalStepAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("We are on the final step!");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+
+                $(".eighth-p57-next").addClass("eighth-p58-next").removeClass("eighth-p57-next");
+
+            } else if ($('.next').hasClass("eighth-p58-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiOhWowAudio = document.getElementById("taji-oh-wow");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiOhWowAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 5; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiOhWowAudio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("Oh wow! What is it called?");
+                    }, 150);
+                $(".eighth-p58-next").addClass("eighth-p59-next").removeClass("eighth-p58-next");
+
+            } else if ($('.next').hasClass("eighth-p59-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var temiDecisionAudio = document.getElementById("temi-decision");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(temiDecisionAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                temiDecisionAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("Step 6: Decision");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+
+                $(".eighth-p59-next").addClass("eighth-p60-next").removeClass("eighth-p59-next");
+
+            } else if ($('.next').hasClass("eighth-p60-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiWhatDoesDecisionMean = document.getElementById("taji-what-does-decision-mean");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiWhatDoesDecisionMean);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiWhatDoesDecisionMean.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("What does it mean?");
+                    }, 150);
+                $(".eighth-p60-next").addClass("eighth-p61-next").removeClass("eighth-p60-next");
+
+            } else if ($('.next').hasClass("eighth-p61-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var temiExplanationDecisionAudio = document.getElementById("temi-explanation-of-decision");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(temiExplanationDecisionAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 4; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                temiExplanationDecisionAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("The committee will decide on what a good way is to solve the problem. The country must then take steps to correct the problem.");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+
+                $(".eighth-p61-next").addClass("eighth-p62-next").removeClass("eighth-p61-next");
+
+            } else if ($('.next').hasClass("eighth-p62-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiIsThatItAudio = document.getElementById("taji-is-that-it");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiIsThatItAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 5; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiIsThatItAudio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("Is that it?");
+                    }, 150);
+                $(".eighth-p62-next").addClass("eighth-p63-next").removeClass("eighth-p62-next");
+
+            } else if ($('.next').hasClass("eighth-p63-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var temiNotReallyAudio = document.getElementById("temi-not-really");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(temiNotReallyAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 5; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                temiNotReallyAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("Not really, The ACERWC will follow-up and see if this is done. Children will then be more protected.");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+
+                $(".eighth-p63-next").addClass("eighth-p64-next").removeClass("eighth-p63-next");
+
+            } else if ($('.next').hasClass("eighth-p64-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiWhatCanChildrenDoAudio = document.getElementById("taji-what-can-children-do");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiWhatCanChildrenDoAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 5; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiWhatCanChildrenDoAudio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("What can children do to help in the implementation?");
+                    }, 150);
+                $(".eighth-p64-next").addClass("eighth-p65-next").removeClass("eighth-p64-next");
+
+            } else if ($('.next').hasClass("eighth-p65-next")) {
+                $("#v1c30")[0].pause();
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tamiContinueWorkingAudio = document.getElementById("tami-continue-working-with");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tamiContinueWorkingAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 5; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tamiContinueWorkingAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("As a child, you can continue to work with trusted adults and organizations to check if the rights of children are violated.");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+
+                $(".eighth-p65-next").addClass("eighth-p66-next").removeClass("eighth-p65-next");
+
+            } else if ($('.next').hasClass("eighth-p66-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tajiThankYouTamiAudio = document.getElementById("taji-thank-you-tami");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tajiThankYouTamiAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 5; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tajiThankYouTamiAudio.play()
+
+                $(".fortemi").removeClass("animate__bounceInRight");
+                //$(".fortemi").addClass("inviza");
+                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
+                setTimeout(
+                    function () {
+                        $(".chathol").removeClass("switchleft");
+                        $(".fortaji").addClass("avoidarrow");
+                        $(".fortaji").removeClass("animate__bounceOutLeft");
+                        $(".fortaji").addClass("animate__bounceInLeft");
+                        $(".chathol").html("Thank you Tami for answering all my questions!");
+                    }, 150);
+                $(".eighth-p66-next").addClass("eighth-p67-next").removeClass("eighth-p66-next");
+
+            } else if ($('.next').hasClass("eighth-p67-next")) {
+                // Mastering the audio in code Increase Volume — Move this to a function
+                var tamiWelcomeTajiAudio = document.getElementById("tami-you-are-welcome-taji");
+                // create an audio context and hook up the video element as the source
+                var audioCtx = new AudioContext();
+                var source = audioCtx.createMediaElementSource(tamiWelcomeTajiAudio);
+                // create a gain node
+                var gainNode = audioCtx.createGain();
+                gainNode.gain.value = 5; // double the volume
+                source.connect(gainNode);
+                // connect the gain node to an output destination
+                gainNode.connect(audioCtx.destination);
+
+                tamiWelcomeTajiAudio.play()
+
+                $(".fortaji").removeClass("avoidarrow");
+                $(".fortaji").addClass("animate__bounceOutLeft");
+                setTimeout(
+                    function () {
+                        $(".fortemi").removeClass("animate__bounceOutRight");
+                        $(".fortemi").addClass("animate__bounceInRight");
+                        $(".fortemi").addClass("temiarrow");
+                        $(".chathol").addClass("switchleft");
+                        $(".chathol").html("You are welcome, it was a pleasure Taji going through the training with you. Before we finish there is the last Rights Trivia. What Are Children Rights");
+                        $(".normalback").removeClass("onyeka");
+                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
+                    }, 150);
+
+                $(".eighth-p67-next").addClass("transitioner-trivia-4").removeClass("eighth-p67-next");
 
             } else if ($('.next').hasClass("transitioner-trivia-4")) {
                 $("#v1c30")[0].pause();
