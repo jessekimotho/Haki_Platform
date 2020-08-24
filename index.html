@@ -4121,9 +4121,11 @@
                 // On fresh load this content is not firing
                 setTimeout(
                     function () {
-                        // Show the miniquiz 
+                        // Show the miniquiz
+                        resetQuizzes();
                         $(".mini-quiz-1").removeClass("hidenow").removeClass("animate__bounceOut").addClass("animate__bounceIn visible");
                         $(".miniquiz-first-question").removeClass("hidenow");
+                        $(".trivo-firste").removeClass("hidenow");
                         console.log("Miniquiz sequence fire!")
                     }, 300);
 
