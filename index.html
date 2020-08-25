@@ -1657,6 +1657,10 @@
     <audio preload="auto" id="v1c10">
         <source src="audio/v1c10.mp3" type="audio/mpeg">
     </audio>
+    <audio preload="auto" id="but-temi-do-i-have-to-do-anything">
+        <source src="audio/but-temi-do-i-have-to-do-anything.mp3" type="audio/mpeg">
+    </audio>
+
     <audio preload="auto" id="v1c11">
         <source src="audio/v1c11.mp3" type="audio/mpeg">
     </audio>
@@ -3190,7 +3194,6 @@
             } else if ($('.next').hasClass("six-p2-next")) {
                 $("#a2c1")[0].pause();
                 $("#a1c2")[0].play();
-                console.log("This is the a1c2 Playing now")
                 $(".fortaji").removeClass("avoidarrow");
                 $(".fortaji").addClass("animate__bounceOutLeft");
                 setTimeout(
@@ -3207,13 +3210,7 @@
 
             } else if ($('.next').hasClass("six-p3-next")) {
                 $("#a1c2")[0].pause();
-                $("#t1v7")[0].play(); // This is the wrong audio
-                $(".chathol").html("The community is also made up of everyone! Parents, children, neighbors, the police, the government and many other people");
-                $(".six-p3-next").addClass("six-p4-next").removeClass("six-p3-next");
-
-            } else if ($('.next').hasClass("six-p4-next")) {
-                $("#a1c2")[0].pause();
-                $("#a1c4")[0].play();
+                $("#but-temi-do-i-have-to-do-anything")[0].play();
                 $(".fortemi").removeClass("animate__bounceInRight");
                 //$(".fortemi").addClass("inviza");
                 $(".fortemi").addClass("animate__animated animate__bounceOutRight");
@@ -3226,27 +3223,10 @@
                         $(".fortaji").addClass("animate__bounceInLeft");
                         $(".chathol").html("But Temi, do I have to do anything to also make sure my community is happy and safe?");
                     }, 150);
-                $(".six-p4-next").addClass("sixt-p8-next").removeClass("six-p4-next");
+                $(".six-p3-next").addClass("six-p4-next").removeClass("six-p3-next");
 
-            } else if ($('.next').hasClass("sixt-p8-next")) {
-                $("#a1c4")[0].pause();
-                $("#v1c10")[0].play();
-                $(".fortemi").removeClass("animate__bounceInRight");
-                //$(".fortemi").addClass("inviza");
-                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
-
-                setTimeout(
-                    function () {
-                        $(".chathol").removeClass("switchleft");
-                        $(".fortaji").addClass("avoidarrow");
-                        $(".fortaji").removeClass("animate__bounceOutLeft");
-                        $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html("to also make sure my community is happy and safe?");
-                    }, 150);
-                $(".sixt-p8-next").addClass("six-p5-next").removeClass("sixt-p8-next");
-
-            } else if ($('.next').hasClass("six-p5-next")) {
-                $("#v1c10")[0].pause();
+            } else if ($('.next').hasClass("six-p4-next")) {
+                $("#but-temi-do-i-have-to-do-anything")[0].pause();
                 $("#a5c7")[0].play();
                 $(".fortaji").removeClass("avoidarrow");
                 $(".fortaji").addClass("animate__bounceOutLeft");
@@ -3256,13 +3236,13 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html("Yes. You can be  respectful to your parents and other children as you play together");
+                        $(".chathol").html("Yes. You can be  respectful to your parents and other children as you play together.");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
-                $(".six-p5-next").addClass("six-p6-next").removeClass("six-p5-next");
+                $(".six-p4-next").addClass("six-p5-next").removeClass("six-p4-next");
 
-            } else if ($('.next').hasClass("six-p6-next")) {
+            } else if ($('.next').hasClass("six-p5-next")) {
                 $("#a5c7")[0].pause();
                 $("#v1c11")[0].play();
                 $(".fortemi").removeClass("animate__bounceInRight");
@@ -3275,11 +3255,11 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" Ok. So tell me,  how do people take away your rights?");
+                        $(".chathol").html("Ok. So tell me, how do people take away our rights?");
                     }, 150);
-                $(".six-p6-next").addClass("six-p7-next").removeClass("six-p6-next");
+                $(".six-p5-next").addClass("six-p6-next").removeClass("six-p5-next");
 
-            } else if ($('.next').hasClass("six-p7-next")) {
+            } else if ($('.next').hasClass("six-p6-next")) {
                 $("#v1c11")[0].pause();
                 $("#v1c12")[0].play();
                 $(".fortaji").removeClass("avoidarrow");
@@ -3290,19 +3270,19 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" People can take away your rights when they don’t allow you to do things which will help you grow as a child. For example, when they Stop you from going to school, they take away your right to an education");
+                        $(".chathol").html("People can take away our rights when they don’t allow you to do things which will help you grow as a child. For example, when they Stop you from going to school, they take away your right to an education.");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
+                $(".six-p6-next").addClass("six-p7-next").removeClass("six-p6-next");
+
+            } else if ($('.next').hasClass("six-p7-next")) {
+                $("#v1c12")[0].pause();
+                $("#a1c8")[0].play();
+                $(".chathol").html("When you are sick and not taken to the hospital or given  medicine, they take away your right to a good health.");
                 $(".six-p7-next").addClass("six-p8-next").removeClass("six-p7-next");
 
             } else if ($('.next').hasClass("six-p8-next")) {
-                $("#v1c12")[0].pause();
-                $("#a1c8")[0].play();
-                $(".chathol").html("When you are sick and not taken to the hospital or given  medicine, they take away your right to a good health");
-                $(".six-p8-next").addClass("six-p9-next").removeClass("six-p8-next");
-
-            } else if ($('.next').hasClass("six-p9-next")) {
                 $("#a1c8")[0].pause();
                 $("#a2c9")[0].play();
                 $(".fortemi").removeClass("animate__bounceInRight");
@@ -3315,11 +3295,11 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" What about when I am helping my mummy in the farm, is she taking away my rights?");
+                        $(".chathol").html("But what about when I am helping my mummy in the farm, is that taking away one of my rights? Tami?");
                     }, 150);
-                $(".six-p9-next").addClass("six-p10-next").removeClass("six-p9-next");
+                $(".six-p8-next").addClass("six-p9-next").removeClass("six-p8-next");
 
-            } else if ($('.next').hasClass("six-p10-next")) {
+            } else if ($('.next').hasClass("six-p9-next")) {
                 $("#a2c9")[0].pause();
                 $("#a2c10")[0].play();
                 $(".fortaji").removeClass("avoidarrow");
@@ -3330,11 +3310,11 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Not at all Taji,<br>You can help your mummy in the farm, but if helping your mum stops you from going to school or the work becomes too much for you and causes you to become injured or get sick,<br> Then yes, your rights have been taken away.<br>Also, if you are asked or forced to work and someone else gets paid to make you work, that is called child exploitation.");
+                        $(".chathol").html("Not at all Taji,<br>You can help your mummy in the farm, but if helping your mum stops you from going to school or the work becomes too much for you and causes you to become injured or get sick,<br> Then yes, your rights have been taken away.<br> Also, if you are asked or forced to work and someone else gets paid to make you work, that is called child exploitation.");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
-                $(".six-p10-next").addClass("six-p12-next").removeClass("six-p10-next");
+                $(".six-p9-next").addClass("six-p10-next").removeClass("six-p9-next");
 
                 // } else if ($('.next').hasClass("six-p11-next")) {
                 //     $("#t1v6")[0].pause();                
@@ -3342,13 +3322,13 @@
                 //     $(".chathol").html(" Also, if you are asked or forced to work and someone else gets paid to make you work, that is called child exploitation.");
                 //     $(".six-p11-next").addClass("six-p12-next").removeClass("six-p11-next");
 
-            } else if ($('.next').hasClass("six-p12-next")) {
+            } else if ($('.next').hasClass("six-p10-next")) {
                 $("#a2c10")[0].pause();
                 $("#a1c12")[0].play();
-                $(".chathol").html(" Do you also know that no one is allowed to  touch you without your permission?");
-                $(".six-p12-next").addClass("six-p13-next").removeClass("six-p12-next");
+                $(".chathol").html("Taji, do you know that no one is allowed to  touch you without your permission?");
+                $(".six-p10-next").addClass("six-p11-next").removeClass("six-p10-next");
 
-            } else if ($('.next').hasClass("six-p13-next")) {
+            } else if ($('.next').hasClass("six-p11-next")) {
                 $("#a1c12")[0].pause();
                 $("#a1c13")[0].play();
                 $(".fortemi").removeClass("animate__bounceInRight");
@@ -3361,11 +3341,11 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" What do you mean Tami? So my mommy and aunty can’t touch or hug me?");
+                        $(".chathol").html("What do you mean Tami?");
                     }, 150);
-                $(".six-p13-next").addClass("six-p14-next").removeClass("six-p13-next");
+                $(".six-p11-next").addClass("six-p12-next").removeClass("six-p11-next");
 
-            } else if ($('.next').hasClass("six-p14-next")) {
+            } else if ($('.next').hasClass("six-p12-next")) {
                 $("#a1c13")[0].pause();
                 $("#a1c14")[0].play();
                 $(".fortaji").removeClass("avoidarrow");
@@ -3376,13 +3356,13 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html("Not that way Taji, what I mean is that no one is allowed to  touch you inappropriately.<br><br> This  means that  no one should  touch your private parts or tell you to remove your clothes or take a photo of yourself while you are naked.");
+                        $(".chathol").html("Not that way Taji, what I mean is no one is allowed to touch you inappropriately.<br><br> This  means that no one should touch your private parts or tell you to remove your clothes or take a photo of yourself while you are naked.");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
-                $(".six-p14-next").addClass("six-p15-next").removeClass("six-p14-next");
+                $(".six-p12-next").addClass("six-p13-next").removeClass("six-p12-next");
 
-            } else if ($('.next').hasClass("six-p15-next")) {
+            } else if ($('.next').hasClass("six-p13-next")) {
                 $("#a1c14")[0].pause();
                 $("#a1c15")[0].play();
                 $(".fortemi").removeClass("animate__bounceInRight");
@@ -3395,11 +3375,11 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" Really Tami? I didn’t know. What right would that be?.");
+                        $(".chathol").html("What right could that be?");
                     }, 150);
-                $(".six-p15-next").addClass("six-p16-next").removeClass("six-p15-next");
+                $(".six-p13-next").addClass("six-p14-next").removeClass("six-p13-next");
 
-            } else if ($('.next').hasClass("six-p16-next")) {
+            } else if ($('.next').hasClass("six-p14-next")) {
                 $("#a1c15")[0].pause();
                 $("#a1c16")[0].play();
                 $(".fortaji").removeClass("avoidarrow");
@@ -3410,13 +3390,13 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" It is your right to privacy and when they touch you it is called sexual abuse and sexual exploitation");
+                        $(".chathol").html("It is your right to privacy and when they touch you it is called sexual abuse and sexual exploitation.");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
-                $(".six-p16-next").addClass("six-p17-next").removeClass("six-p16-next");
+                $(".six-p14-next").addClass("six-p15-next").removeClass("six-p14-next");
 
-            } else if ($('.next').hasClass("six-p17-next")) {
+            } else if ($('.next').hasClass("six-p15-next")) {
                 $("#a1c16")[0].pause();
                 $("#a2c17")[0].play();
                 $(".fortemi").removeClass("animate__bounceInRight");
@@ -3429,11 +3409,11 @@
                         $(".fortaji").addClass("avoidarrow");
                         $(".fortaji").removeClass("animate__bounceOutLeft");
                         $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" Tami, Is that all about child rights violations?");
+                        $(".chathol").html("Tami, Is that all about child rights violations?");
                     }, 150);
-                $(".six-p17-next").addClass("six-p18-next").removeClass("six-p17-next");
+                $(".six-p15-next").addClass("six-p16-next").removeClass("six-p15-next");
 
-            } else if ($('.next').hasClass("six-p18-next")) {
+            } else if ($('.next').hasClass("six-p16-next")) {
                 $("#a2c17")[0].pause();
                 $("#a1c18")[0].play();
                 $(".fortaji").removeClass("avoidarrow");
@@ -3444,14 +3424,14 @@
                         $(".fortemi").addClass("animate__bounceInRight");
                         $(".fortemi").addClass("temiarrow");
                         $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Yes, we are Finished for now! Remember it is very important to learn about your rights. This will make it easy for you to know when someone has taken away your rights.<br>Also remember it is the  responsibility of all people in a community, including the President, to make sure all children  enjoy their rights!");
+                        $(".chathol").html(" Yes, we are finished. But for now, remember it is very important to learn about your rights. This will make it easy for you to know when someone has taken away your rights.<br>Also remember that it is the responsibility of all people in the community, including the President, to make sure all children enjoy their rights!");
                         $(".normalback").removeClass("onyeka");
                         $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
                     }, 150);
                 $.cookie('mod2cookie', 'complitedi2', {
                     expires: 4000
                 });
-                $(".six-p18-next").addClass("transitioner-trivia-2").removeClass("six-p18-next");
+                $(".six-p16-next").addClass("transitioner-trivia-2").removeClass("six-p16-next");
 
                 // CONGRATS MESSAGE
             } else if ($('.next').hasClass("transitioner-trivia-2")) {
@@ -6468,330 +6448,6 @@
 
                 //REMOVES THE "NEXT" CLASS VISIBILITY
                 $(".next").removeClass("visibleko");
-            }
-
-
-            // MODULE 2
-            else if ($('.next').hasClass("six-p3-next")) {
-                $("#a2c11")[0].pause();
-                $("#a2c1")[0].play();
-                $(".fortemi").removeClass("animate__bounceInRight");
-                //$(".fortemi").addClass("inviza");
-                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
-
-                setTimeout(
-                    function () {
-                        $(".chathol").removeClass("switchleft");
-                        $(".fortaji").addClass("avoidarrow");
-                        $(".fortaji").removeClass("animate__bounceOutLeft");
-                        $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html("I think Mummy, Daddy, Teacher , the Chief, the police And most of all the president.");
-                    }, 150);
-                $(".six-p3-next").addClass("six-p2-next").removeClass("six-p3-next");
-
-            } else if ($('.next').hasClass("six-p4-next")) {
-                $("#a2c1")[0].pause();
-                $("#a1c2")[0].play();
-                $(".fortaji").removeClass("avoidarrow");
-                $(".fortaji").addClass("animate__bounceOutLeft");
-                setTimeout(
-                    function () {
-                        $(".fortemi").removeClass("animate__bounceOutRight");
-                        $(".fortemi").addClass("animate__bounceInRight");
-                        $(".fortemi").addClass("temiarrow");
-                        $(".chathol").addClass("switchleft");
-                        $(".chathol").html("Yes, Yes, Yes, It is the job of the entire community to make sure that children’s  rights are protected.The community is also made up of everyone! Parents, children, neighbors, the police, the government and many other people");
-                        $(".normalback").removeClass("onyeka");
-                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
-                    }, 150);
-                $(".six-p4-next").addClass("six-p3-next").removeClass("six-p4-next");
-
-                // } else if ($('.next').hasClass("six-p5-next")) {
-                // $("#t1v6")[0].pause();                
-                //     $("#t1v7")[0].play(); 
-                // $(".fortaji").removeClass("avoidarrow");
-                //     $(".fortaji").addClass("animate__bounceOutLeft");
-                //     setTimeout(
-                //         function() {
-                //             $(".fortemi").removeClass("animate__bounceOutRight");
-                //             $(".fortemi").addClass("animate__bounceInRight");
-                //             $(".fortemi").addClass("temiarrow");
-                //             $(".chathol").addClass("switchleft");               
-                //     $(".chathol").html("The community is also made up of everyone! Parents, children, neighbors, the police, the government and many other people.");
-                //     $(".normalback").removeClass("onyeka");
-                //             $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
-                //         }, 150);
-
-                //     $(".six-p5-next").addClass("six-p4-next").removeClass("six-p5-next");
-
-            } else if ($('.next').hasClass("six-p6-next")) {
-                $("#a1c2")[0].pause();
-                $("#a1c4")[0].play();
-                $(".fortemi").removeClass("animate__bounceInRight");
-                //$(".fortemi").addClass("inviza");
-                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
-
-                setTimeout(
-                    function () {
-                        $(".chathol").removeClass("switchleft");
-                        $(".fortaji").addClass("avoidarrow");
-                        $(".fortaji").removeClass("animate__bounceOutLeft");
-                        $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" But Temi,  do I have to do anything to also make sure my community is happy and safe?");
-                    }, 150);
-                $(".six-p6-next").addClass("six-p4-next").removeClass("six-p6-next");
-
-            } else if ($('.next').hasClass("sixt-p8-next")) {
-                $("#a1c4")[0].pause();
-                $("#v1c10")[0].play();
-                $(".fortemi").removeClass("animate__bounceInRight");
-                //$(".fortemi").addClass("inviza");
-                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
-
-                setTimeout(
-                    function () {
-                        $(".chathol").removeClass("switchleft");
-                        $(".fortaji").addClass("avoidarrow");
-                        $(".fortaji").removeClass("animate__bounceOutLeft");
-                        $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html("to also make sure my community is happy and safe?");
-                    }, 150);
-                $(".sixt-p8-next").addClass("six-p6-next").removeClass("sixt-p8-next");
-
-
-            } else if ($('.next').hasClass("six-p7-next")) {
-                $("#v1c10")[0].pause();
-                $("#a5c7")[0].play();
-                $(".fortaji").removeClass("avoidarrow");
-                $(".fortaji").addClass("animate__bounceOutLeft");
-                setTimeout(
-                    function () {
-                        $(".fortemi").removeClass("animate__bounceOutRight");
-                        $(".fortemi").addClass("animate__bounceInRight");
-                        $(".fortemi").addClass("temiarrow");
-                        $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Yes. You can be  respectful to your parents and other children as you play together");
-                        $(".normalback").removeClass("onyeka");
-                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
-                    }, 150);
-                $(".six-p7-next").addClass("sixt-p8-next").removeClass("six-p7-next");
-
-            } else if ($('.next').hasClass("six-p8-next")) {
-                $("#a5c7")[0].pause();
-                $("#v1c11")[0].play();
-
-                $(".fortemi").removeClass("animate__bounceInRight");
-                //$(".fortemi").addClass("inviza");
-                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
-
-                setTimeout(
-                    function () {
-                        $(".chathol").removeClass("switchleft");
-                        $(".fortaji").addClass("avoidarrow");
-                        $(".fortaji").removeClass("animate__bounceOutLeft");
-                        $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" Ok. So tell me,  how do people take away your rights?");
-                    }, 150);
-                $(".six-p8-next").addClass("six-p7-next").removeClass("six-p8-next");
-
-            } else if ($('.next').hasClass("six-p9-next")) {
-                $("#v1c11")[0].pause();
-                $("#v1c12")[0].play();
-                $(".fortaji").removeClass("avoidarrow");
-                $(".fortaji").addClass("animate__bounceOutLeft");
-                setTimeout(
-                    function () {
-                        $(".fortemi").removeClass("animate__bounceOutRight");
-                        $(".fortemi").addClass("animate__bounceInRight");
-                        $(".fortemi").addClass("temiarrow");
-                        $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" People can take away your rights when they don’t allow you to do things which will help you grow as a child. For example, when they Stop you from going to school, they take away your right to an education.");
-                        $(".normalback").removeClass("onyeka");
-                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
-                    }, 150);
-                $(".six-p9-next").addClass("six-p8-next").removeClass("six-p9-next");
-
-            } else if ($('.next').hasClass("six-p10-next")) {
-                $("#v1c12")[0].pause();
-                $("#a1c8")[0].play();
-                $(".fortaji").removeClass("avoidarrow");
-                $(".fortaji").addClass("animate__bounceOutLeft");
-                setTimeout(
-                    function () {
-                        $(".fortemi").removeClass("animate__bounceOutRight");
-                        $(".fortemi").addClass("animate__bounceInRight");
-                        $(".fortemi").addClass("temiarrow");
-                        $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Also When you are sick and not taken to the hospital or given  medicine, they take away your right to a good health");
-                        $(".normalback").removeClass("onyeka");
-                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
-                    }, 150);
-                $(".six-p10-next").addClass("six-p9-next").removeClass("six-p10-next");
-
-            } else if ($('.next').hasClass("six-p11-next")) {
-                $("#a1c8")[0].pause();
-                $("#a2c9")[0].play();
-                $(".fortemi").removeClass("animate__bounceInRight");
-                //$(".fortemi").addClass("inviza");
-                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
-
-                setTimeout(
-                    function () {
-                        $(".chathol").removeClass("switchleft");
-                        $(".fortaji").addClass("avoidarrow");
-                        $(".fortaji").removeClass("animate__bounceOutLeft");
-                        $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" What about when I am helping my mummy in the farm, is she taking away my rights?");
-                    }, 150);
-                $(".six-p11-next").addClass("six-p10-next").removeClass("six-p11-next");
-
-            } else if ($('.next').hasClass("six-p12-next")) {
-                $("#a2c9")[0].pause();
-                $("#a2c10")[0].play();
-                $(".fortaji").removeClass("avoidarrow");
-                $(".fortaji").addClass("animate__bounceOutLeft");
-                setTimeout(
-                    function () {
-                        $(".fortemi").removeClass("animate__bounceOutRight");
-                        $(".fortemi").addClass("animate__bounceInRight");
-                        $(".fortemi").addClass("temiarrow");
-                        $(".chathol").addClass("switchleft");
-                        $(".chathol").html("Not at all Taji,<br>You can help your mummy in the farm, but if helping your mum stops you from going to school or the work becomes too much for you and causes you to become injured or get sick,<br> Then yes, your rights have been taken away.<br><br>Also, if you are asked or forced to work and someone else gets paid to make you work, that is called child exploitation ");
-                        $(".normalback").removeClass("onyeka");
-                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
-                    }, 150);
-                $(".six-p12-next").addClass("six-p11-next").removeClass("six-p12-next");
-
-                // } else if ($('.next').hasClass("six-p13-next")) {
-                //     $("#t1v6")[0].pause();                
-                //     $("#t1v7")[0].play();
-                // $(".fortaji").removeClass("avoidarrow");
-                //     $(".fortaji").addClass("animate__bounceOutLeft");
-                //     setTimeout(
-                //         function() {
-                //             $(".fortemi").removeClass("animate__bounceOutRight");
-                //             $(".fortemi").addClass("animate__bounceInRight");
-                //             $(".fortemi").addClass("temiarrow");
-                //             $(".chathol").addClass("switchleft");                
-                //     $(".chathol").html("Also, if you are asked or forced to work and someone else gets paid to make you work, that is called child exploitation");
-                //     $(".normalback").removeClass("onyeka");
-                //             $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
-                //         }, 150);
-                //     $(".six-p13-next").addClass("six-p12-next").removeClass("six-p13-next");
-
-            } else if ($('.next').hasClass("six-p14-next")) {
-                $("#a2c10")[0].pause();
-                $("#a1c12")[0].play();
-                $(".fortaji").removeClass("avoidarrow");
-                $(".fortaji").addClass("animate__bounceOutLeft");
-                setTimeout(
-                    function () {
-                        $(".fortemi").removeClass("animate__bounceOutRight");
-                        $(".fortemi").addClass("animate__bounceInRight");
-                        $(".fortemi").addClass("temiarrow");
-                        $(".chathol").addClass("switchleft");
-                        $(".chathol").html("Do you also know that no one is allowed to  touch you without your permission?");
-                        $(".normalback").removeClass("onyeka");
-                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
-                    }, 150);
-                $(".six-p14-next").addClass("six-p12-next").removeClass("six-p14-next");
-
-            } else if ($('.next').hasClass("six-p15-next")) {
-                $("#a1c12")[0].pause();
-                $("#a1c13")[0].play();
-                $(".fortemi").removeClass("animate__bounceInRight");
-                //$(".fortemi").addClass("inviza");
-                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
-
-                setTimeout(
-                    function () {
-                        $(".chathol").removeClass("switchleft");
-                        $(".fortaji").addClass("avoidarrow");
-                        $(".fortaji").removeClass("animate__bounceOutLeft");
-                        $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html("  What do you mean Tami? So my mommy and aunty can’t touch or hug me?.");
-                    }, 150);
-                $(".six-p15-next").addClass("six-p14-next").removeClass("six-p15-next");
-
-            } else if ($('.next').hasClass("six-p16-next")) {
-                $("#a1c13")[0].pause();
-                $("#a1c14")[0].play();
-                $(".fortaji").removeClass("avoidarrow");
-                $(".fortaji").addClass("animate__bounceOutLeft");
-                setTimeout(
-                    function () {
-                        $(".fortemi").removeClass("animate__bounceOutRight");
-                        $(".fortemi").addClass("animate__bounceInRight");
-                        $(".fortemi").addClass("temiarrow");
-                        $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" Not that way Taji, what I mean is that no one is allowed to  touch you inappropriately.<br><br> This  means that  no one should  touch your private parts or tell you to remove your clothes or take a photo of yourself while you are naked.");
-                        $(".normalback").removeClass("onyeka");
-                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
-                    }, 150);
-                $(".six-p16-next").addClass("six-p15-next").removeClass("six-p16-next");
-
-            } else if ($('.next').hasClass("six-p17-next")) {
-                $("#a1c14")[0].pause();
-                $("#a1c15")[0].play();
-                $(".fortemi").removeClass("animate__bounceInRight");
-                //$(".fortemi").addClass("inviza");
-                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
-
-                setTimeout(
-                    function () {
-                        $(".chathol").removeClass("switchleft");
-                        $(".fortaji").addClass("avoidarrow");
-                        $(".fortaji").removeClass("animate__bounceOutLeft");
-                        $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" Really Tami? I didn’t know. What right would that be?.");
-                    }, 150);
-                $(".six-p17-next").addClass("six-p16-next").removeClass("six-p17-next");
-
-            } else if ($('.next').hasClass("six-p18-next")) {
-                $("#a1c15")[0].pause();
-                $("#a1c16")[0].play();
-                $(".fortaji").removeClass("avoidarrow");
-                $(".fortaji").addClass("animate__bounceOutLeft");
-                setTimeout(
-                    function () {
-                        $(".fortemi").removeClass("animate__bounceOutRight");
-                        $(".fortemi").addClass("animate__bounceInRight");
-                        $(".fortemi").addClass("temiarrow");
-                        $(".chathol").addClass("switchleft");
-                        $(".chathol").html(" It is your right to privacy and when they touch you it is called sexual abuse and sexual exploitation.");
-                        $(".normalback").removeClass("onyeka");
-                        $(".backimg").addClass("animate__bounceIn").removeClass("animate__bounceOut");
-                    }, 150);
-                $(".six-p18-next").addClass("six-p17-next").removeClass("six-p18-next");
-
-            } else if ($('.next').hasClass("six-p19-next")) {
-                $("#a1c16")[0].pause();
-                $("#a2c17")[0].play();
-                $(".fortemi").removeClass("animate__bounceInRight");
-                //$(".fortemi").addClass("inviza");
-                $(".fortemi").addClass("animate__animated animate__bounceOutRight");
-
-                setTimeout(
-                    function () {
-                        $(".chathol").removeClass("switchleft");
-                        $(".fortaji").addClass("avoidarrow");
-                        $(".fortaji").removeClass("animate__bounceOutLeft");
-                        $(".fortaji").addClass("animate__bounceInLeft");
-                        $(".chathol").html(" Thank you Tami, Now I Know...Tami, Is that all about child rights violations?");
-                    }, 150);
-                $(".six-p19-next").addClass("six-p18-next").removeClass("six-p19-next");
-
-            } else if ($('.next').hasClass("six-p20-next")) {
-                $(".chathol").html("Yes, we are Finished for now! Remember it is very important to learn about your rights. This will make it easy for you to know when someone has taken away your rights");
-                $.cookie('mod2cookie', 'complitedi2', {
-                    expires: 4000
-                });
-                $(".six-p20-next").addClass("transitioner-2").removeClass("six-p20-next");
-
-
-
-
-
             }
 
             // MODULE 3
